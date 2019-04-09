@@ -1,0 +1,128 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+\usepackage[numbered]{matlab-prettifier} % including matlab w/ syntax highlighting
+\usepackage[T1]{fontenc} % prettier matlab font
+\lstMakeShortInline[style=Matlab-editor]| % matlab inline escape character
+\graphicspath{ {./Figures/} }
+
+\usepackage[
+top    = 2.75cm,
+bottom = 2.50cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+
+
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\include{title}
+\pagenumbering{roman}
+{\tableofcontents\let\clearpage\relax}
+\clearpage
+\pagenumbering{arabic}
+\newpage
+\begin{flushleft}
+
+\section{Calculate the center of mass with respect to the sun}
+Using the center of mass equation (Eq. \ref{eq:COM}) we produced MATLAB code to solve for the system's center of mass with respect to the sun.
+\begin{equation} \label{eq:COM}
+\vec{r}_{cm} = \frac{ \Sigma_{i=1}^{n}m_i \vec{r}_{Sun \to i} }{\Sigma_{i=1}^{n}m_i}
+\end{equation}
+\vspace{5px}
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+rCM = (rSunMars * M_Mars + rSunPhobos * M_Phobos + rSunInSight * M_InSight)/(M_InSight + M_Phobos + M_Mars + M_Sun);
+\end{lstlisting}
+\vspace{5px}
+The center of mass with respect to the sun is $(64.1296 \hat{\imath} + 23.5509 \hat{\jmath} -0.1080\hat{k})~km$
+
+\section{Find the acceleration of InSight}
+\begin{large}
+  Find the acceleration of InSight ($\ddot{\vec{r}}_{InSight}$). What is the acceleration relative to?
+\end{large}\\
+\vspace{5px}
+Using (Eq. \ref{eq:ACC}) and MATLAB we calculated $\ddot{\vec{r}}_{InSight}$
+\begin{equation} \label{eq:ACC}
+\ddot{\vec{r}}_i = - \Sigma_{j=1}^{n} \frac{Gm_j}{r_{j \to i}^3} \cdot \vec{r}_{j \to i}
+\end{equation}
+\vspace{5px}
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+Accel_InSight = -G * (((M_Sun * rSunInSight) / norm(rSunInSight)^3 )+((M_Phobos * rPhobosInSight) / (norm(rPhobosInSight)^3 )) +((M_Mars * rMarsInSight)/ (norm(rMarsInSight)^3)));
+\end{lstlisting}
+\vspace{5px}
+The acceleration of InSight is $(-2.744 \hat{\imath} -1.116 \hat{\jmath} + 0.007\hat{k}) \cdot 10^{-6}~km/s^2$. This acceleration is relative to an inertial point, which is the center of mass of the system. (Calculated in Eq. \ref{eq:COM})
+\section{Write the relative motion differential equation}
+\begin{large}
+  Write the differential equation that governs the relative motion of InSight relative to Mars.
+\end{large}
+\begin{multline}
+  \ddot{\vec{r}}_{Mars \to InSight} = \frac{-G(m_{InSight} + m_{Mars})}{r^3_{Mars \to InSight}} \cdot \vec{r}_{Mars \to InSight} + G \cdot m_{Sun}(\frac{\vec{r}_{InSight \to Sun}}{r^3_{InSight \to Sun}} - \frac{\vec{r}_{Mars \to Sun}}{r^3_{Mars \to Sun}}) \\
+  + G \cdot m_{Phobos}(\frac{\vec{r}_{InSight \to Phobos}}{r^3_{InSight \to Phobos}} - \frac{\vec{r}_{Mars \to Phobos}}{r^3_{Mars \to Phobos}})
+\end{multline}
+
+\section{Determine Accelerations}
+\begin{large}
+  Determine the dominant, direct, and indirect acceleration (vector) on InSight.
+\end{large}\\
+\vspace{5px}
+Dominant acceleration on InSight:
+\begin{equation} \label{eq:DomAcc}
+  \frac{-G(m_{InSight} + m_{Mars})}{r^3_{Mars \to InSight}} \cdot \vec{r}_{Mars \to InSight} = (3.206 \hat{\imath} -8.66 \hat{\jmath} + 0.243 \hat{k}) \cdot 10^{-8}~km/s^2
+\end{equation}
+Direct accelerations on InSight:\\
+~~~~Due to the Sun:\\
+\begin{equation}
+  G \cdot m_{Sun} \cdot \frac{\vec{r}_{InSight \to Sun}}{r^3_{InSight \to Sun}}
+  = (-2.776 \hat{\imath} -1.030 \hat{\jmath} + 0.005\hat{k}) \cdot 10^{-6}~km/s^2
+\end{equation}
+~~~~Due to Phobos:
+\begin{equation}
+  G \cdot m_{Phobos} \cdot \frac{\vec{r}_{InSight \to Phobos}}{r^3_{InSight \to Phobos}} = (0.511 \hat{\imath} -1.401 \hat{\jmath} + 0.037\hat{k}) \cdot 10^{-15}~km/s^2
+\end{equation}
+Indirect accelerations on InSight:\\
+~~~~Due to the Sun:\\
+  \begin{equation}
+    -G \cdot m_{Sun} \cdot \frac{\vec{r}_{Mars \to Sun}}{r^3_{Mars \to Sun}}
+    = (2.780 \hat{\imath} + 1.021 \hat{\jmath} - 0.005\hat{k}) \cdot 10^{-6}~km/s^2
+  \end{equation}
+~~~~Due to Phobos:
+  \begin{equation} \label{eq:IndirPhobos}
+    -G \cdot m_{Phobos} \cdot \frac{\vec{r}_{Mars \to Phobos}}{r^3_{Mars \to Phobos}} = (-0.151 \hat{\imath} + 8.089 \hat{\jmath} + 0.609\hat{k}) \cdot 10^{-12}~km/s^2
+  \end{equation}
+\section{Evaluate Accelerations}
+\begin{large}
+  For the same relative acceleration (InSight relative to Mars), evaluate the acceleration due to Mars, acceleration due to the Sun, and acceleration due to Phobos.
+\end{large}\\
+\vspace{5px}
+Using equations \ref{eq:DomAcc}-\ref{eq:IndirPhobos} and MATLAB we solve for the various accelerations induced on InSight by other celestial bodies.
+\vspace{5px}
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+Accel_InSight_due_to_Mars = (-G * (M_InSight + M_Mars) / (norm(rMarsInSight)^3) * (rMarsInSight));
+Accel_InSight_due_to_Sun = (G * (M_Sun * ((rInSightSun / norm(rInSightSun)^3)- (rMarsSun / norm(rMarsSun)^3))));
+Accel_InSight_due_to_Phobos = (G * (M_Phobos * ((rInSightPhobos / norm(rInSightPhobos)^3)- (rMarsPhobos/norm(rMarsPhobos)^3))));
+\end{lstlisting}
+\vspace{5px}
+Acceleration of InSight due to Mars is $(3.206 \hat{\imath} -8.666 \hat{\jmath} + 0.243\hat{k}) \cdot 10^{-8}~km/s^2$\\
+Acceleration of InSight due to the Sun is $(3.282 \hat{\imath} -8.935 \hat{\jmath} + 0.251 \hat{k}) \cdot 10^{-9}~km/s^2$\\
+Acceleration of InSight due to Phobos is $(-1.508 \hat{\imath} + 0.8088 \hat{\jmath} + 0.0695 \hat{k}) \cdot 10^{-13}~km/s^2$
+\section{Is it Reasonable?}
+\begin{large}
+  At this instant is it reasonable to assume a two-body relative model for motion of the spacecraft with respect to Mars? Why or why not?
+\end{large}\\
+\vspace{5px}
+It is not reasonable to assume a 2-body relative model for motion of the spacecraft with respect to Mars. The gravitational influence of the Sun on InSight is approximately 10\% of the influence of Mars on InSight. If a two-body relative model of motion was assumed between InSight and Mars, 10\% of the total accelerative forces would be ignored. This opens up potential for mission disrupting inaccuracies.
+
+\end{flushleft}
+\newpage
+\input{matlab}
+\end{document}

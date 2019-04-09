@@ -1,0 +1,110 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\usepackage[numbered]{matlab-prettifier} % including matlab w/ syntax highlighting
+\usepackage[T1]{fontenc} % prettier matlab font
+\lstMakeShortInline[style=Matlab-editor]| % matlab inline escape character
+
+\usepackage[
+top    = 2.75cm,
+bottom = 2.50cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+
+\graphicspath{ {./Figures/} }
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\include{title}
+\pagenumbering{arabic}
+\begin{center}
+\large AE 313 Homework 7
+\end{center}
+\flushleft
+1. What is the initial Jason orbit semi-major axis, eccentricity, and true anomaly?\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+syms am
+eq = -MU/(2*am) == vm^2/2 - MU/rm;
+am = double(solve(eq, am)) % 6.6993e3 km
+
+hm = rm*vm*cosd(FPAm);
+pm = hm^2/MU;
+em = sqrt(1-pm/am) % 0.5001
+
+true_am = atan2d(rm*vm^2/MU*cosd(FPAm)*sind(FPAm),rm*vm^2/MU*cosd(FPAm)^2-1) % 160.0052
+\end{lstlisting}
+\begin{tabular}{rl}
+  $a^-=$&6699.3~km\\
+  $e^-=$&0.5001$^\circ$\\
+  $\theta^{*-}=$&160.0052$^\circ$
+\end{tabular}\\
+\vspace{10px}
+2. Draw the vector diagram.\\
+~On a separate page\\
+\vspace{10px}
+3. Determine the velocity and flight path angle immediately following the
+maneuver. Make sure to justify if $\Delta \gamma$ is positive or negative.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+syms vp FPAp
+vp = sqrt(vm^2 + dv^2 - 2*vm*dv*cosd(180 - abs(alpha))) % 6.1136 km/s
+dFPA = acosd(((dv^2)-(vm^2)-(vp^2))/(-2*vm*vp)) %11.5652 deg | negative because the dv is oriented towards earth (indicated by the negative alpha)
+FPAp = FPAm - dFPA;
+\end{lstlisting}
+\begin{tabular}{rl}
+  $v^+=$&6.1136~km/s\\
+  $\gamma^+=$&6.3148$^\circ$\\
+\end{tabular}\\
+$\Delta \gamma$ is negative because $\lvert \Delta \vec{v} \rvert$ is oriented towards earth (indicated by the negative alpha).\\
+\newpage
+4. Determine the orbital characteristics following the maneuver: $a^+, e^+, \theta^{*+}, \Delta \omega$\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+FPAp = FPAm - dFPA;
+syms ap
+rp = rm;
+eq = -MU/(2*ap) == vp^2/2 - MU/rp;
+ap = double(solve(eq, ap)) % 8.5290e+03 km
+ep = sqrt((rp*vp^2/MU - 1)^2*cosd(FPAp)^2 + sind(FPAp)^2) % 0.1560
+true_ap = atan2d(rp*vp^2/MU*cosd(FPAp)*sind(FPAp),rp*vp^2/MU*cosd(FPAp)^2 - 1)
+true_ap = atan2d(rp*vp^2/MU*cosd(FPAp)*sind(FPAp),rp*vp^2/MU*cosd(FPAp)^2-1); % 141.4710
+dAOP = -(true_ap - true_am) % 18.5342
+\end{lstlisting}
+\begin{tabular}{rl}
+$a^+=$&8529~km\\
+$e^+=$&0.1260\\
+$\theta^{*+}=$&141.71$^\circ$\\
+$\Delta \omega=$&18.5342$^\circ$\\
+\end{tabular}
+$\theta^{*+}$'s value is positive due to the fact that $atan2$ takes into account the signs of the components. $\Delta \omega=$18.5342$^\circ$ is a positive value due to the fact that it follow's the relationship of $\Delta \omega = \theta^{*-} - \theta^{*+}$.
+\newpage
+5. Use GMAT to plot the two orbits. Propagate both orbits at least one
+period. Draw the vector diagram (vm, vp, alpha, dFPA, dv) and position
+vector for the maneuver on the printout. Check $a^+, e^+, \theta^*, v^+$.
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.23]{Orbits}
+  \caption{GMAT Plot of Orbits}
+  \label{fig:GMAT}
+\end{figure}\\
+\begin{tabular}{rl}
+$a^+=$&8529~km\\
+$e^+=$&0.1560\\
+$\theta^{*+}=$&141.471$^\circ$\\
+$v^+=$&6.1136~km/s\\
+\end{tabular}\\
+\vspace{5px}
+6. What would happen if you failed to perform this maneuver?\\
+~Without the maneuver, ICESAT-2 is on a parabollic collision trajectory with Earth. If the maneuver failed, the spacecraft would crash into Earth. This can be observed in (Fig. \ref{fig:GMAT}) where the smaller, red orbit displays the collision trajectory.
+\newpage
+\input{matlab}
+\end{document}

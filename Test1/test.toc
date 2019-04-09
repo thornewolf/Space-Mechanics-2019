@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}Calculate the center of mass with respect to the sun}{1}{section.1}
+\contentsline {section}{\numberline {2}Find the acceleration of InSight}{1}{section.2}
+\contentsline {section}{\numberline {3}Write the relative motion differential equation}{1}{section.3}
+\contentsline {section}{\numberline {4}Determine Accelerations}{2}{section.4}
+\contentsline {section}{\numberline {5}Evaluate Accelerations}{2}{section.5}
+\contentsline {section}{\numberline {6}Is it Reasonable?}{3}{section.6}

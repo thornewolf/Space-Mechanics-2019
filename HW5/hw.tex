@@ -1,0 +1,81 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\usepackage[numbered]{matlab-prettifier} % including matlab w/ syntax highlighting
+\usepackage[T1]{fontenc} % prettier matlab font
+\lstMakeShortInline[style=Matlab-editor]| % matlab inline escape character
+
+\usepackage[
+top    = 2.75cm,
+bottom = 2.50cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+
+\graphicspath{ {./Figures/} }
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\include{title}
+\pagenumbering{arabic}
+\begin{center}
+\large AE 313 Homework 5
+\end{center}
+\flushleft
+1. Find $e, E_0, (t_0-t_p).$\\
+  ~~$e = 0.453$\\
+  ~~$E_0 = -1.8076$\\
+  ~~$(t_0-t_p) = -3.4481 \cdot 10^3$\\
+\vspace{5px}
+2. Write $\vec{v}$ in terms of radial-transverse vectors $(\hat{r}, \hat{\theta}, \hat{h}).$\\
+  ~~$\vec{v} = -1.0231 \hat{r} + 2.0714 \hat{\theta}~km/s$\\
+\vspace{5px}
+3. Using Lagrange coefficients, write the new velocity $(\vec{v}_1)$ in terms of inertial unit vectors $(\hat{x}, \hat{y}, \hat{z})$ and radial-tangential coordinates $(\hat{r}, \hat{\theta}, \hat{h})$\\
+  ~~$\vec{v}_1 = 0.5869 \hat{x} - 0.2144 \hat{y} - 1.4488 \hat{z}~km/s$\\
+  ~~$\vec{v}_1 = -0.0302 \hat{r} + 1.5775 \hat{\theta}~km/s$\\
+\vspace{5px}
+4. Write the new position and velocity $(\vec{r}_1, \vec{v}_1)$ in terms of perifocal coordinates $(\hat{e}, \hat{p}, \hat{h})$.\\
+  ~~$\vec{r}_1 = (-9.4141 \hat{e} - 0.2174 \hat{p}) \cdot 10^3~km/s$\\
+  ~~$\vec{v}_1 = 0.0666 \hat{e} - 1.5764 \hat{p}~km/s$\\
+\vspace{5px}
+5. Determine the inclination, longitude of the ascending node, and the argument of periapsis of MAVEN's orbit.\\
+~~$i = 1.3077~rad = 74.9266^\circ$\\
+Inclination is only defined from $0^\circ$ to $90^\circ$ so it is positive.\\
+~~$\Omega = 0.3243~rad = 18.5792^\circ$\\
+$\Omega$ is solved for by two equations in the MATLAB code.\\
+~~$\omega = 1.0691~rad = 61.2563^\circ$\\
+$\omega$ does not need a quadrant check. The underlying $\theta$ has its value as solved by two equations in the MATLAB code.\\
+\vspace{5px}
+6. Set-up a Mars centered scenario. Propagate the spacecraft for 12 hours. State $i, \Omega, \omega$ and $\vec{r}_1, \vec{v}_1$ in the inertial coordinates $\hat{x}, \hat{y}, \hat{z}$ from GMAT. Are they close to your calculated values? Note you should have position errors of less than 1 km and velocity errors of 0.3 m/s.\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.6]{HW5}
+  \caption{Martian Orbit}
+  \label{}
+\end{figure}
+\newpage
+~From GMAT\\
+~~$\vec{r}_1 = (-8.3118 \hat{x} - 3.5461 \hat{y} -2.6476 \hat{z}) \cdot 10^3~km$\\
+~~$\vec{v}_1 = 0.5872 \hat{x} -0.2142 \hat{y} -1.4487 \hat{z}~km/s$\\
+~From Calculations\\
+~~$\vec{r}_1 = (-8.3123 \hat{x} - 3.5460 \hat{y} -2.6466 \hat{z}) \cdot 10^3~km$\\
+~~$\vec{v}_1 = 0.5869 \hat{x} -0.2144 \hat{y} -1.4488 \hat{z}~km/s$\\
+These values are within the acceptable error.\\
+\vspace{5px}
+7. If you were planning this trajectory, would you be worried about the lifetime of the spacecraft? Why or why not? What if the trajectory had the same altitude above Earth as it does above Mars?\\
+~~I would be worried about the lifetime of the spacecraft. Since the MAVEN is designed to perform atmospheric research it would encounter atmospheric drag. This drag would reduce the lifetime of the space craft by decaying the orbit and wearing down the spaceceraft.\\
+If it was at the same altitude above the earth as it is above mars it would be 3545.94 km above the 6390.1 km reach of Earth's atmosphere. More importantly, it would be inside the 6378.1 km radius of Earth at periapsis. This implies that the spacecraft would impact with Earth.
+
+\newpage
+\input{matlab}
+\end{document}

@@ -1,0 +1,176 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2019-04-08 16:11:01
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft MAVEN;
+GMAT MAVEN.DateFormat = UTCGregorian;
+GMAT MAVEN.Epoch = '08 Apr 2019 12:00:00.000';
+GMAT MAVEN.CoordinateSystem = MarsMJ2000Eq;
+GMAT MAVEN.DisplayStateType = Keplerian;
+GMAT MAVEN.SMA = 5744.000000020184;
+GMAT MAVEN.ECC = 0.3842000000015617;
+GMAT MAVEN.INC = 74.77000000001837;
+GMAT MAVEN.RAAN = 321.6999999998616;
+GMAT MAVEN.AOP = 303.1999999999794;
+GMAT MAVEN.TA = 260.6999999999636;
+GMAT MAVEN.DryMass = 850;
+GMAT MAVEN.Cd = 2.2;
+GMAT MAVEN.Cr = 1.8;
+GMAT MAVEN.DragArea = 15;
+GMAT MAVEN.SRPArea = 1;
+GMAT MAVEN.NAIFId = -10000001;
+GMAT MAVEN.NAIFIdReferenceFrame = -9000001;
+GMAT MAVEN.OrbitColor = Red;
+GMAT MAVEN.TargetColor = Teal;
+GMAT MAVEN.OrbitErrorCovariance = [ 1e+070 0 0 0 0 0 ; 0 1e+070 0 0 0 0 ; 0 0 1e+070 0 0 0 ; 0 0 0 1e+070 0 0 ; 0 0 0 0 1e+070 0 ; 0 0 0 0 0 1e+070 ];
+GMAT MAVEN.CdSigma = 1e+070;
+GMAT MAVEN.CrSigma = 1e+070;
+GMAT MAVEN.Id = 'SatId';
+GMAT MAVEN.Attitude = CoordinateSystemFixed;
+GMAT MAVEN.SPADSRPScaleFactor = 1;
+GMAT MAVEN.ModelFile = 'aura.3ds';
+GMAT MAVEN.ModelOffsetX = 0;
+GMAT MAVEN.ModelOffsetY = 0;
+GMAT MAVEN.ModelOffsetZ = 0;
+GMAT MAVEN.ModelRotationX = 0;
+GMAT MAVEN.ModelRotationY = 0;
+GMAT MAVEN.ModelRotationZ = 0;
+GMAT MAVEN.ModelScale = 1;
+GMAT MAVEN.AttitudeDisplayStateType = 'Quaternion';
+GMAT MAVEN.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT MAVEN.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT MAVEN.EulerAngleSequence = '321';
+
+
+
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel marsPropagator_ForceModel;
+GMAT marsPropagator_ForceModel.CentralBody = Mars;
+GMAT marsPropagator_ForceModel.PointMasses = {Mars};
+GMAT marsPropagator_ForceModel.Drag = None;
+GMAT marsPropagator_ForceModel.SRP = Off;
+GMAT marsPropagator_ForceModel.RelativisticCorrection = Off;
+GMAT marsPropagator_ForceModel.ErrorControl = RSSStep;
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator marsPropagator;
+GMAT marsPropagator.FM = marsPropagator_ForceModel;
+GMAT marsPropagator.Type = RungeKutta89;
+GMAT marsPropagator.InitialStepSize = 60;
+GMAT marsPropagator.Accuracy = 9.999999999999999e-012;
+GMAT marsPropagator.MinStep = 0.001;
+GMAT marsPropagator.MaxStep = 2700;
+GMAT marsPropagator.MaxStepAttempts = 50;
+GMAT marsPropagator.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Burns
+%----------------------------------------
+
+Create ImpulsiveBurn impulseBurn_Prob2;
+GMAT impulseBurn_Prob2.CoordinateSystem = Local;
+GMAT impulseBurn_Prob2.Origin = Mars;
+GMAT impulseBurn_Prob2.Axes = VNB;
+GMAT impulseBurn_Prob2.Element1 = 0.09900000000000001;
+GMAT impulseBurn_Prob2.Element2 = 0;
+GMAT impulseBurn_Prob2.Element3 = 0.09900000000000001;
+GMAT impulseBurn_Prob2.DecrementMass = false;
+GMAT impulseBurn_Prob2.Isp = 300;
+GMAT impulseBurn_Prob2.GravitationalAccel = 9.810000000000001;
+
+Create ImpulsiveBurn impulseBurn_Prob5;
+GMAT impulseBurn_Prob5.CoordinateSystem = Local;
+GMAT impulseBurn_Prob5.Origin = Mars;
+GMAT impulseBurn_Prob5.Axes = VNB;
+GMAT impulseBurn_Prob5.Element1 = 0.1329;
+GMAT impulseBurn_Prob5.Element2 = -0.0484;
+GMAT impulseBurn_Prob5.Element3 = -0.1685;
+GMAT impulseBurn_Prob5.DecrementMass = false;
+GMAT impulseBurn_Prob5.Isp = 300;
+GMAT impulseBurn_Prob5.GravitationalAccel = 9.810000000000001;
+
+%----------------------------------------
+%---------- Coordinate Systems
+%----------------------------------------
+
+Create CoordinateSystem MarsMJ2000Eq;
+GMAT MarsMJ2000Eq.Origin = Mars;
+GMAT MarsMJ2000Eq.Axes = MJ2000Eq;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView marsView;
+GMAT marsView.SolverIterations = Current;
+GMAT marsView.UpperLeft = [ 0.005294117647058823 0 ];
+GMAT marsView.Size = [ 1.142352941176471 0.85995085995086 ];
+GMAT marsView.RelativeZOrder = 32;
+GMAT marsView.Maximized = false;
+GMAT marsView.Add = {MAVEN, Mars};
+GMAT marsView.CoordinateSystem = MarsMJ2000Eq;
+GMAT marsView.DrawObject = [ true true ];
+GMAT marsView.DataCollectFrequency = 1;
+GMAT marsView.UpdatePlotFrequency = 50;
+GMAT marsView.NumPointsToRedraw = 0;
+GMAT marsView.ShowPlot = true;
+GMAT marsView.MaxPlotPoints = 20000;
+GMAT marsView.ShowLabels = true;
+GMAT marsView.ViewPointReference = Mars;
+GMAT marsView.ViewPointVector = [ 30000 0 0 ];
+GMAT marsView.ViewDirection = Mars;
+GMAT marsView.ViewScaleFactor = 1;
+GMAT marsView.ViewUpCoordinateSystem = MarsMJ2000Eq;
+GMAT marsView.ViewUpAxis = Z;
+GMAT marsView.EclipticPlane = Off;
+GMAT marsView.XYPlane = Off;
+GMAT marsView.WireFrame = Off;
+GMAT marsView.Axes = On;
+GMAT marsView.Grid = Off;
+GMAT marsView.SunLine = Off;
+GMAT marsView.UseInitialView = On;
+GMAT marsView.StarCount = 7000;
+GMAT marsView.EnableStars = Off;
+GMAT marsView.EnableConstellations = On;
+
+Create ReportFile reportFile;
+GMAT reportFile.SolverIterations = Current;
+GMAT reportFile.UpperLeft = [ 0.04705882352941176 0.1240786240786241 ];
+GMAT reportFile.Size = [ 0.9152941176470588 0.7862407862407862 ];
+GMAT reportFile.RelativeZOrder = 30;
+GMAT reportFile.Maximized = false;
+GMAT reportFile.Filename = 'DefaultReportFile.txt';
+GMAT reportFile.Precision = 16;
+GMAT reportFile.Add = {MAVEN.MarsMJ2000Eq.X, MAVEN.MarsMJ2000Eq.Y, MAVEN.MarsMJ2000Eq.Z, MAVEN.MarsMJ2000Eq.VX, MAVEN.MarsMJ2000Eq.VY, MAVEN.MarsMJ2000Eq.VZ};
+GMAT reportFile.WriteHeaders = true;
+GMAT reportFile.LeftJustify = On;
+GMAT reportFile.ZeroFill = Off;
+GMAT reportFile.FixedWidth = true;
+GMAT reportFile.Delimiter = ' ';
+GMAT reportFile.ColumnWidth = 23;
+GMAT reportFile.WriteReport = true;
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Report 'getValues_Prob1' reportFile MAVEN.MarsMJ2000Eq.X MAVEN.MarsMJ2000Eq.Y MAVEN.MarsMJ2000Eq.Z MAVEN.MarsMJ2000Eq.VX MAVEN.MarsMJ2000Eq.VY MAVEN.MarsMJ2000Eq.VZ MAVEN.MarsMJ2000Eq.FPA MAVEN.Mars.SMA MAVEN.Mars.ECC MAVEN.MarsMJ2000Eq.RAAN MAVEN.MarsMJ2000Eq.AOP MAVEN.MarsMJ2000Eq.INC;
+Maneuver 'doManeuver_Prob2' impulseBurn_Prob2(MAVEN);
+Report 'getValues_Prob3' reportFile MAVEN.MarsMJ2000Eq.VMAG MAVEN.MarsMJ2000Eq.FPA;
+Propagate 'wait_Prob4' marsPropagator(MAVEN) {MAVEN.Mars.TA = 240};
+Report 'getValues_Prob4' reportFile MAVEN.MarsMJ2000Eq.X MAVEN.MarsMJ2000Eq.Y MAVEN.MarsMJ2000Eq.Z MAVEN.MarsMJ2000Eq.VX MAVEN.MarsMJ2000Eq.VY MAVEN.MarsMJ2000Eq.VZ MAVEN.MarsMJ2000Eq.RAAN;
+Maneuver 'doManeuver_Prob5' impulseBurn_Prob5(MAVEN);
+Report 'getValues_Prob6' reportFile MAVEN.MarsMJ2000Eq.VX MAVEN.MarsMJ2000Eq.VY MAVEN.MarsMJ2000Eq.VZ MAVEN.Mars.SMA MAVEN.Mars.ECC MAVEN.MarsMJ2000Eq.RAAN MAVEN.MarsMJ2000Eq.AOP MAVEN.MarsMJ2000Eq.INC;

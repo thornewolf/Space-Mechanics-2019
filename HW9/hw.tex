@@ -1,0 +1,110 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\usepackage[numbered]{matlab-prettifier} % including matlab w/ syntax highlighting
+\usepackage[T1]{fontenc} % prettier matlab font
+\lstMakeShortInline[style=Matlab-editor]| % matlab inline escape character
+
+\usepackage[
+top    = 2.75cm,
+bottom = 2.50cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+
+\graphicspath{ {./Figures/} }
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\include{title}
+\pagenumbering{arabic}
+\begin{center}
+\large AE 313 Homework 9
+\end{center}
+\flushleft
+2. Draw the heliocentric trajectory of Insight.\\
+~On separate page.\\
+\vspace{10px}
+3. Determine Earth's and InSight's heliocentric properties $(r, v, \gamma)$ at departure.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+r_earth = r('Earth');
+r_mars = r('Mars');
+
+v_earth = sqrt(MU('Sun')/r_earth);
+FPA_earth = 0;
+...
+\end{lstlisting}
+\begin{tabular}{rl}
+$r_{Earth}=r_{InSight}=$&$149600000~km$\\
+$v_{Earth}$=&$29.7845~km/s$\\
+$v_{Insight}=$&$32.7285~km/s$\\
+$\gamma_{Earth}=\gamma_{InSight}=$&$0^\circ$\\
+\end{tabular}
+\vspace{10px}\\
+4. Draw the vector diagram in the heliocentric orbit and determine $v^+_{\infty/Earth}$.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+v_inf_earth = v_sc1 - v_earth;
+\end{lstlisting}
+~Diagram on separate page.\\
+\begin{tabular}{rl}
+$v^+_{\infty/Earth}$=&$2.944~km/s$\\
+\end{tabular}\\
+\vspace{10px}
+5. What is the $\Delta v_1$ to depart Earth? Don't forget the vector diagram!\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+energy_inf_earth = v_inf_earth^2/2;
+r_sc_earth = 300 + R('Earth');
+...
+\end{lstlisting}
+~Diagram on separate page.\\
+\begin{tabular}{rl}
+$\Delta v_1$=&$3.5898~km/s$\\
+\end{tabular}\\
+\vspace{10px}
+6. Now move to the capture portion of the orbit. Determine Mars' and InSight's heliocentric properties at arrival $(r,v,\gamma)$.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+r_mars = r('Mars');
+v_mars = sqrt(MU('Sun')/r_mars);
+FPA_mars = 0;
+...
+\end{lstlisting}
+\begin{tabular}{rl}
+  $r_{Mars}=r_{InSight}=$&$227920000~km$\\
+  $v_{Mars}$=&$24.1304~km/s$\\
+  $v_{Insight}=$&$21.4920~km/s$\\
+  $\gamma_{Mars}=\gamma_{InSight}=$&$0^\circ$\\
+\end{tabular}\\
+\newpage
+7. Draw the vector diagram in the heliocentric orbit and determine $v^-_{\infty/Mars}$.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+v_inf_mars = abs(v_sc2 - v_mars);
+\end{lstlisting}
+~Diagram on separate page.\\
+\begin{tabular}{rl}
+$v^-_{\infty/Mars}$=&$2.6484~km/s$\\
+\end{tabular}\\
+\vspace{10px}
+8. What is the required $\Delta v_2$ to capture at Mars? Don't forget the vector diagram!\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+dv_capture = v_mars_circ - v_mars_peri;
+\end{lstlisting}
+~Diagram on separate page.\\
+\begin{tabular}{rl}
+$\Delta v_2$=&$2.1075~km/s$ (slowing down)\\
+\end{tabular}\\
+\vspace{10px}
+9. Are the required $\Delta v$ values reasonable? Why or why not?\\
+The $\Delta v$ values are quite small compared to many transfer maneuvers. Given the small size of a lander these $\Delta v$ values are not unreasonable for the reasource costs associated with them. Therefore they are reasonable.
+\newpage
+\input{matlab}
+\end{document}

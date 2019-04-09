@@ -1,0 +1,206 @@
+%General Mission Analysis Tool(GMAT) Script
+%Created: 2019-01-29 23:55:17
+
+
+%----------------------------------------
+%---------- Spacecraft
+%----------------------------------------
+
+Create Spacecraft EarthSat;
+GMAT EarthSat.DateFormat = UTCGregorian;
+GMAT EarthSat.Epoch = '01 Jan 2019 12:00:00.000';
+GMAT EarthSat.CoordinateSystem = EarthMJ2000Eq;
+GMAT EarthSat.DisplayStateType = Keplerian;
+GMAT EarthSat.SMA = 260000.0000000003;
+GMAT EarthSat.ECC = 0.2300000000000011;
+GMAT EarthSat.INC = 18.24999999999998;
+GMAT EarthSat.RAAN = 0;
+GMAT EarthSat.AOP = 150;
+GMAT EarthSat.TA = 0;
+GMAT EarthSat.DryMass = 850;
+GMAT EarthSat.Cd = 2.2;
+GMAT EarthSat.Cr = 1.8;
+GMAT EarthSat.DragArea = 15;
+GMAT EarthSat.SRPArea = 1;
+GMAT EarthSat.NAIFId = -10000001;
+GMAT EarthSat.NAIFIdReferenceFrame = -9000001;
+GMAT EarthSat.OrbitColor = Red;
+GMAT EarthSat.TargetColor = Teal;
+GMAT EarthSat.OrbitErrorCovariance = [ 1e+070 0 0 0 0 0 ; 0 1e+070 0 0 0 0 ; 0 0 1e+070 0 0 0 ; 0 0 0 1e+070 0 0 ; 0 0 0 0 1e+070 0 ; 0 0 0 0 0 1e+070 ];
+GMAT EarthSat.CdSigma = 1e+070;
+GMAT EarthSat.CrSigma = 1e+070;
+GMAT EarthSat.Id = 'SatId';
+GMAT EarthSat.Attitude = CoordinateSystemFixed;
+GMAT EarthSat.SPADSRPScaleFactor = 1;
+GMAT EarthSat.ModelFile = 'aura.3ds';
+GMAT EarthSat.ModelOffsetX = 0;
+GMAT EarthSat.ModelOffsetY = 0;
+GMAT EarthSat.ModelOffsetZ = 0;
+GMAT EarthSat.ModelRotationX = 0;
+GMAT EarthSat.ModelRotationY = 0;
+GMAT EarthSat.ModelRotationZ = 0;
+GMAT EarthSat.ModelScale = 1;
+GMAT EarthSat.AttitudeDisplayStateType = 'Quaternion';
+GMAT EarthSat.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT EarthSat.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT EarthSat.EulerAngleSequence = '321';
+
+Create Spacecraft EMSSat;
+GMAT EMSSat.DateFormat = UTCGregorian;
+GMAT EMSSat.Epoch = '01 Jan 2019 12:00:00.000';
+GMAT EMSSat.CoordinateSystem = EarthMJ2000Eq;
+GMAT EMSSat.DisplayStateType = Keplerian;
+GMAT EMSSat.SMA = 260000;
+GMAT EMSSat.ECC = 0.2299999999999999;
+GMAT EMSSat.INC = 18.24999999999999;
+GMAT EMSSat.RAAN = 0;
+GMAT EMSSat.AOP = 149.9999999999999;
+GMAT EMSSat.TA = 0;
+GMAT EMSSat.DryMass = 850;
+GMAT EMSSat.Cd = 2.2;
+GMAT EMSSat.Cr = 1.8;
+GMAT EMSSat.DragArea = 15;
+GMAT EMSSat.SRPArea = 1;
+GMAT EMSSat.NAIFId = -10001001;
+GMAT EMSSat.NAIFIdReferenceFrame = -9001001;
+GMAT EMSSat.OrbitColor = Green;
+GMAT EMSSat.TargetColor = LightGray;
+GMAT EMSSat.OrbitErrorCovariance = [ 1e+070 0 0 0 0 0 ; 0 1e+070 0 0 0 0 ; 0 0 1e+070 0 0 0 ; 0 0 0 1e+070 0 0 ; 0 0 0 0 1e+070 0 ; 0 0 0 0 0 1e+070 ];
+GMAT EMSSat.CdSigma = 1e+070;
+GMAT EMSSat.CrSigma = 1e+070;
+GMAT EMSSat.Id = 'SatId';
+GMAT EMSSat.Attitude = CoordinateSystemFixed;
+GMAT EMSSat.SPADSRPScaleFactor = 1;
+GMAT EMSSat.ModelFile = 'aura.3ds';
+GMAT EMSSat.ModelOffsetX = 0;
+GMAT EMSSat.ModelOffsetY = 0;
+GMAT EMSSat.ModelOffsetZ = 0;
+GMAT EMSSat.ModelRotationX = 0;
+GMAT EMSSat.ModelRotationY = 0;
+GMAT EMSSat.ModelRotationZ = 0;
+GMAT EMSSat.ModelScale = 1;
+GMAT EMSSat.AttitudeDisplayStateType = 'Quaternion';
+GMAT EMSSat.AttitudeRateDisplayStateType = 'AngularVelocity';
+GMAT EMSSat.AttitudeCoordinateSystem = EarthMJ2000Eq;
+GMAT EMSSat.EulerAngleSequence = '321';
+
+%----------------------------------------
+%---------- ForceModels
+%----------------------------------------
+
+Create ForceModel EarthProp_ForceModel;
+GMAT EarthProp_ForceModel.CentralBody = Earth;
+GMAT EarthProp_ForceModel.PointMasses = {Earth};
+GMAT EarthProp_ForceModel.Drag = None;
+GMAT EarthProp_ForceModel.SRP = Off;
+GMAT EarthProp_ForceModel.RelativisticCorrection = Off;
+GMAT EarthProp_ForceModel.ErrorControl = RSSStep;
+
+Create ForceModel EMS_ForceModel;
+GMAT EMS_ForceModel.CentralBody = Earth;
+GMAT EMS_ForceModel.PointMasses = {Earth, Luna, Sun};
+GMAT EMS_ForceModel.Drag = None;
+GMAT EMS_ForceModel.SRP = Off;
+GMAT EMS_ForceModel.RelativisticCorrection = Off;
+GMAT EMS_ForceModel.ErrorControl = RSSStep;
+
+%----------------------------------------
+%---------- Propagators
+%----------------------------------------
+
+Create Propagator EarthProp;
+GMAT EarthProp.FM = EarthProp_ForceModel;
+GMAT EarthProp.Type = RungeKutta89;
+GMAT EarthProp.InitialStepSize = 60;
+GMAT EarthProp.Accuracy = 9.999999999999999e-012;
+GMAT EarthProp.MinStep = 0.001;
+GMAT EarthProp.MaxStep = 2700;
+GMAT EarthProp.MaxStepAttempts = 50;
+GMAT EarthProp.StopIfAccuracyIsViolated = true;
+
+Create Propagator EMS;
+GMAT EMS.FM = EMS_ForceModel;
+GMAT EMS.Type = RungeKutta89;
+GMAT EMS.InitialStepSize = 60;
+GMAT EMS.Accuracy = 9.999999999999999e-012;
+GMAT EMS.MinStep = 0.001;
+GMAT EMS.MaxStep = 2700;
+GMAT EMS.MaxStepAttempts = 50;
+GMAT EMS.StopIfAccuracyIsViolated = true;
+
+%----------------------------------------
+%---------- Subscribers
+%----------------------------------------
+
+Create OrbitView DefaultOrbitView;
+GMAT DefaultOrbitView.SolverIterations = Current;
+GMAT DefaultOrbitView.UpperLeft = [ 0 0 ];
+GMAT DefaultOrbitView.Size = [ 0.4735356386732534 0.6009821976672806 ];
+GMAT DefaultOrbitView.RelativeZOrder = 424;
+GMAT DefaultOrbitView.Maximized = false;
+GMAT DefaultOrbitView.Add = {EarthSat, EMSSat, Earth, Luna};
+GMAT DefaultOrbitView.CoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.DrawObject = [ true true true true ];
+GMAT DefaultOrbitView.DataCollectFrequency = 1;
+GMAT DefaultOrbitView.UpdatePlotFrequency = 50;
+GMAT DefaultOrbitView.NumPointsToRedraw = 0;
+GMAT DefaultOrbitView.ShowPlot = true;
+GMAT DefaultOrbitView.MaxPlotPoints = 20000;
+GMAT DefaultOrbitView.ShowLabels = true;
+GMAT DefaultOrbitView.ViewPointReference = Earth;
+GMAT DefaultOrbitView.ViewPointVector = [ 0 -98112 909304.875 ];
+GMAT DefaultOrbitView.ViewDirection = Earth;
+GMAT DefaultOrbitView.ViewScaleFactor = 1;
+GMAT DefaultOrbitView.ViewUpCoordinateSystem = EarthMJ2000Eq;
+GMAT DefaultOrbitView.ViewUpAxis = Z;
+GMAT DefaultOrbitView.EclipticPlane = Off;
+GMAT DefaultOrbitView.XYPlane = Off;
+GMAT DefaultOrbitView.WireFrame = Off;
+GMAT DefaultOrbitView.Axes = Off;
+GMAT DefaultOrbitView.Grid = Off;
+GMAT DefaultOrbitView.SunLine = Off;
+GMAT DefaultOrbitView.UseInitialView = On;
+GMAT DefaultOrbitView.StarCount = 7000;
+GMAT DefaultOrbitView.EnableStars = Off;
+GMAT DefaultOrbitView.EnableConstellations = Off;
+
+Create GroundTrackPlot DefaultGroundTrackPlot;
+GMAT DefaultGroundTrackPlot.SolverIterations = Current;
+GMAT DefaultGroundTrackPlot.UpperLeft = [ 0.4721242060691602 -0.0006138735420503376 ];
+GMAT DefaultGroundTrackPlot.Size = [ 0.5264643613267467 0.6022099447513812 ];
+GMAT DefaultGroundTrackPlot.RelativeZOrder = 428;
+GMAT DefaultGroundTrackPlot.Maximized = false;
+GMAT DefaultGroundTrackPlot.Add = {EarthSat, EMSSat};
+GMAT DefaultGroundTrackPlot.DataCollectFrequency = 1;
+GMAT DefaultGroundTrackPlot.UpdatePlotFrequency = 50;
+GMAT DefaultGroundTrackPlot.NumPointsToRedraw = 0;
+GMAT DefaultGroundTrackPlot.ShowPlot = true;
+GMAT DefaultGroundTrackPlot.MaxPlotPoints = 20000;
+GMAT DefaultGroundTrackPlot.CentralBody = Earth;
+GMAT DefaultGroundTrackPlot.TextureMap = 'ModifiedBlueMarble.jpg';
+
+Create ReportFile ReportFile1;
+GMAT ReportFile1.SolverIterations = Current;
+GMAT ReportFile1.UpperLeft = [ 0 0 ];
+GMAT ReportFile1.Size = [ 0 0 ];
+GMAT ReportFile1.RelativeZOrder = 0;
+GMAT ReportFile1.Maximized = false;
+GMAT ReportFile1.Filename = 'C:\Users\thorn\Desktop\Space Mech\HW3Report.txt';
+GMAT ReportFile1.Precision = 4;
+GMAT ReportFile1.Add = {EarthSat.Earth.SMA, EarthSat.Earth.ECC, EarthSat.EarthMJ2000Eq.INC, EarthSat.EarthMJ2000Eq.RAAN, EarthSat.EarthMJ2000Eq.AOP, EarthSat.Earth.OrbitPeriod, EarthSat.Earth.RadApo, EMSSat.A1Gregorian, EMSSat.Earth.SMA, EMSSat.Earth.ECC, EMSSat.EarthMJ2000Eq.INC, EMSSat.EarthMJ2000Eq.AOP, EMSSat.EarthMJ2000Eq.RAAN, EMSSat.Earth.OrbitPeriod, EMSSat.Earth.RadApo};
+GMAT ReportFile1.WriteHeaders = true;
+GMAT ReportFile1.LeftJustify = On;
+GMAT ReportFile1.ZeroFill = Off;
+GMAT ReportFile1.FixedWidth = true;
+GMAT ReportFile1.Delimiter = ' ';
+GMAT ReportFile1.ColumnWidth = 15;
+GMAT ReportFile1.WriteReport = true;
+
+
+%----------------------------------------
+%---------- Mission Sequence
+%----------------------------------------
+
+BeginMissionSequence;
+Propagate EarthProp(EarthSat) {EarthSat.ElapsedDays = 30, OrbitColor = [128 255 128]};
+Propagate EMS(EMSSat) {EMSSat.ElapsedDays = 30, OrbitColor = [255 128 192]};

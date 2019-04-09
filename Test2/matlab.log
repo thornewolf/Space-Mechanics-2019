@@ -1,0 +1,3263 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  4 MAR 2019 19:13
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**matlab.tex
+(./matlab.tex
+LaTeX2e <2018-04-01> patch level 2
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
+
+./matlab.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 T
+     eam3\_GroupExam2.m
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no m in font nullfont!
+
+./matlab.tex:2: LaTeX Error: Environment lstlisting undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \begin{lstlisting}
+                      [frame=lines,style=Matlab-editor,basicstyle = \mlttfam...
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+./matlab.tex:2: Undefined control sequence.
+l.2 ...tyle=Matlab-editor,basicstyle = \mlttfamily
+                                                  ]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ] in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--5
+[][]
+ []
+
+
+./matlab.tex:6: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 c
+     lc; clear all; close all;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 6--7
+[]
+ []
+
+
+./matlab.tex:9: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 M
+     U = 398600;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no M in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 6 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 8 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+./matlab.tex:15: Missing $ inserted.
+<inserted text> 
+                $
+l.15 true_
+          a1 = 184.2; %deg
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 15.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 15.
+./matlab.tex:17: Missing $ inserted.
+<inserted text> 
+                $
+l.17 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 9--17
+[]
+ []
+
+
+Overfull \hbox (20.39317pt too wide) in paragraph at lines 9--17
+[]\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (68.27208pt too wide) in paragraph at lines 9--17
+\OT1/cmr/m/n/10 184\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2; \OML/cmm/m/it/10 energy \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (44.82088pt too wide) in paragraph at lines 9--17
+\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 MU=\OT1/cmr/m/n/10 (2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (11.95258pt too wide) in paragraph at lines 9--17
+\OML/cmm/m/it/10 a\OT1/cmr/m/n/10 );$ 
+ []
+
+
+./matlab.tex:19: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 p
+       = a*(1-e^2);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no p in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no e in font nullfont!
+./matlab.tex:19: Missing $ inserted.
+<inserted text> 
+                $
+l.19 p = a*(1-e^
+                2);
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:22: Missing $ inserted.
+<inserted text> 
+                $
+l.22 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 19--22
+[]
+ []
+
+
+Overfull \hbox (29.13654pt too wide) in paragraph at lines 19--22
+[]\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 h \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (45.50949pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 sqrt\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 MU \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (33.70946pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 p\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 r\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (26.69798pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 p=\OT1/cmr/m/n/10 (1 +
+ []
+
+
+Overfull \hbox (9.65628pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (62.13063pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 1));$ 
+ []
+
+
+./matlab.tex:23: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 v
+      r1_rth = [r1 0 0]';
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./matlab.tex:23: Missing $ inserted.
+<inserted text> 
+                $
+l.23 vr1_
+         rth = [r1 0 0]';
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:25: Missing $ inserted.
+<inserted text> 
+                $
+l.25 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (44.35646pt too wide) in paragraph at lines 23--25
+[]$[]\OML/cmm/m/it/10 th \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (72.36345pt too wide) in paragraph at lines 23--25
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 100][]; \OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 th \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (13.53938pt too wide) in paragraph at lines 23--25
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 h \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (19.68755pt too wide) in paragraph at lines 23--25
+\OML/cmm/m/it/10 e=p \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (89.64876pt too wide) in paragraph at lines 23--25
+\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 h=r\OT1/cmr/m/n/10 10][];$ 
+ []
+
+
+./matlab.tex:26: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 A
+      OL1 = AOP + true_a1;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+./matlab.tex:26: Missing $ inserted.
+<inserted text> 
+                $
+l.26 AOL1 = AOP + true_
+                       a1;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:28: Missing $ inserted.
+<inserted text> 
+                $
+l.28 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 26--28
+[]
+ []
+
+
+Overfull \hbox (51.06645pt too wide) in paragraph at lines 26--28
+[]\OT1/cmr/m/n/10 1; \OML/cmm/m/it/10 rth[]ci \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (130.78566pt too wide) in paragraph at lines 26--28
+\OML/cmm/m/it/10 rot[]th[]ci\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 RAAN; inc; AOL\OT1/cmr/m/n/10 1);$ 
+ []
+
+
+./matlab.tex:29: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 v
+      r1_eci = rth_eci*vr1_rth;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./matlab.tex:29: Missing $ inserted.
+<inserted text> 
+                $
+l.29 vr1_
+         eci = rth_eci*vr1_rth;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:31: Missing $ inserted.
+<inserted text> 
+                $
+l.31 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (42.62231pt too wide) in paragraph at lines 29--31
+[]$[]\OML/cmm/m/it/10 ci \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (31.22888pt too wide) in paragraph at lines 29--31
+\OML/cmm/m/it/10 rth[]ci \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (71.2751pt too wide) in paragraph at lines 29--31
+\OML/cmm/m/it/10 vr\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 th\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 ci \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (31.22888pt too wide) in paragraph at lines 29--31
+\OML/cmm/m/it/10 rth[]ci \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.99077pt too wide) in paragraph at lines 29--31
+\OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 th\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:32: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 v
+      r1_peri = r1*[cosd(true_a1) sind(true_a1) 0]';
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./matlab.tex:32: Missing $ inserted.
+<inserted text> 
+                $
+l.32 vr1_
+         peri = r1*[cosd(true_a1) sind(true_a1) 0]';
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:39: Missing $ inserted.
+<inserted text> 
+                $
+l.39 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (48.06862pt too wide) in paragraph at lines 32--39
+[]$[]\OML/cmm/m/it/10 eri \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (14.7894pt too wide) in paragraph at lines 32--39
+\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (172.48679pt too wide) in paragraph at lines 32--39
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 1)0][]; \OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 eri \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (31.34845pt too wide) in paragraph at lines 32--39
+\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 h=p \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (76.5295pt too wide) in paragraph at lines 32--39
+\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 h=p \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (16.32297pt too wide) in paragraph at lines 32--39
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (112.91023pt too wide) in paragraph at lines 32--39
+\OML/cmm/m/it/10 cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 1))0][]; \OML/cmm/m/it/10 period \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 32--39
+\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (13.4764pt too wide) in paragraph at lines 32--39
+\OML/cmm/m/it/10 pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (86.5731pt too wide) in paragraph at lines 32--39
+\OML/cmm/m/it/10 sqrt\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]=MU\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (52.87729pt too wide) in paragraph at lines 32--39
+\OT1/cmr/m/n/10 15; \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 ad \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (17.95834pt too wide) in paragraph at lines 32--39
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.25423pt too wide) in paragraph at lines 32--39
+\OML/cmm/m/it/10 pi=\OT1/cmr/m/n/10 180;$ 
+ []
+
+
+./matlab.tex:43: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 E
+      1 = 2*atand(tand(true_a1/2)/sqrt((1+e)/(1-e)));
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no E in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+./matlab.tex:43: Missing $ inserted.
+<inserted text> 
+                $
+l.43 E1 = 2*atand(tand(true_
+                            a1/2)/sqrt((1+e)/(1-e)));
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:47: Missing $ inserted.
+<inserted text> 
+                $
+l.47 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 43--47
+[]
+ []
+
+
+Overfull \hbox (67.19312pt too wide) in paragraph at lines 43--47
+[]\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 =sqrt\OT1/cmr/m/n/10 ((1 +
+ []
+
+
+Overfull \hbox (30.2119pt too wide) in paragraph at lines 43--47
+\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (59.20023pt too wide) in paragraph at lines 43--47
+\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 ))); \OML/cmm/m/it/10 E\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 ad \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (17.95834pt too wide) in paragraph at lines 43--47
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.25423pt too wide) in paragraph at lines 43--47
+\OML/cmm/m/it/10 pi=\OT1/cmr/m/n/10 180;$ 
+ []
+
+
+./matlab.tex:48: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.48 d
+      t = sqrt(a^3/MU)*(E2_rad - E1_rad - (e*sin(E2_rad) - e*sin(E1_rad)));
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no a in font nullfont!
+./matlab.tex:48: Missing $ inserted.
+<inserted text> 
+                $
+l.48 dt = sqrt(a^
+                 3/MU)*(E2_rad - E1_rad - (e*sin(E2_rad) - e*sin(E1_rad)));
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:49: Missing $ inserted.
+<inserted text> 
+                $
+l.49 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 48--49
+[]
+ []
+
+
+Overfull \hbox (36.52919pt too wide) in paragraph at lines 48--49
+[]\OML/cmm/m/it/10 =MU\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (39.54404pt too wide) in paragraph at lines 48--49
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 ad \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (35.65514pt too wide) in paragraph at lines 48--49
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 ad \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (13.54518pt too wide) in paragraph at lines 48--49
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (57.56792pt too wide) in paragraph at lines 48--49
+\OML/cmm/m/it/10 sin\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 ad\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (9.65628pt too wide) in paragraph at lines 48--49
+\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (60.3457pt too wide) in paragraph at lines 48--49
+\OML/cmm/m/it/10 sin\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 ad\OT1/cmr/m/n/10 )));$ 
+ []
+
+
+./matlab.tex:51: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 r
+      2 = a*(1-e*cos(E2_rad));
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./matlab.tex:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 r2 = a*(1-e*cos(E2_
+                        rad));
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:53: Missing $ inserted.
+<inserted text> 
+                $
+l.53 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 51--53
+[]
+ []
+
+
+Overfull \hbox (66.31572pt too wide) in paragraph at lines 51--53
+[]\OML/cmm/m/it/10 ad\OT1/cmr/m/n/10 )); \OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 51--53
+\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (72.74553pt too wide) in paragraph at lines 51--53
+\OML/cmm/m/it/10 atan\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 sqrt\OT1/cmr/m/n/10 ((1 +
+ []
+
+
+Overfull \hbox (30.2119pt too wide) in paragraph at lines 51--53
+\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (17.43408pt too wide) in paragraph at lines 51--53
+\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (76.66563pt too wide) in paragraph at lines 51--53
+\OML/cmm/m/it/10 tan\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 ad=\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1);$ 
+ []
+
+
+./matlab.tex:60: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 v
+      r2_rth = [r2 0 0]';
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./matlab.tex:60: Missing $ inserted.
+<inserted text> 
+                $
+l.60 vr2_
+         rth = [r2 0 0]';
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:62: Missing $ inserted.
+<inserted text> 
+                $
+l.62 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (44.35646pt too wide) in paragraph at lines 60--62
+[]$[]\OML/cmm/m/it/10 th \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (72.36345pt too wide) in paragraph at lines 60--62
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 200][]; \OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 th \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (13.53938pt too wide) in paragraph at lines 60--62
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 h \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (19.68755pt too wide) in paragraph at lines 60--62
+\OML/cmm/m/it/10 e=p \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (89.64876pt too wide) in paragraph at lines 60--62
+\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 h=r\OT1/cmr/m/n/10 20][];$ 
+ []
+
+
+./matlab.tex:63: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 A
+      OL2 = AOP + true_a2;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no P in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+./matlab.tex:63: Missing $ inserted.
+<inserted text> 
+                $
+l.63 AOL2 = AOP + true_
+                       a2;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:65: Missing $ inserted.
+<inserted text> 
+                $
+l.65 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 63--65
+[]
+ []
+
+
+Overfull \hbox (51.06645pt too wide) in paragraph at lines 63--65
+[]\OT1/cmr/m/n/10 2; \OML/cmm/m/it/10 rth[]ci \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (130.78566pt too wide) in paragraph at lines 63--65
+\OML/cmm/m/it/10 rot[]th[]ci\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 RAAN; inc; AOL\OT1/cmr/m/n/10 2);$ 
+ []
+
+
+./matlab.tex:66: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.66 v
+      r2_eci = rth_eci*vr2_rth;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./matlab.tex:66: Missing $ inserted.
+<inserted text> 
+                $
+l.66 vr2_
+         eci = rth_eci*vr2_rth;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:68: Missing $ inserted.
+<inserted text> 
+                $
+l.68 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (42.62231pt too wide) in paragraph at lines 66--68
+[]$[]\OML/cmm/m/it/10 ci \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (31.22888pt too wide) in paragraph at lines 66--68
+\OML/cmm/m/it/10 rth[]ci \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (71.2751pt too wide) in paragraph at lines 66--68
+\OML/cmm/m/it/10 vr\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 th\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 ci \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (31.22888pt too wide) in paragraph at lines 66--68
+\OML/cmm/m/it/10 rth[]ci \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.99077pt too wide) in paragraph at lines 66--68
+\OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 th\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:69: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 v
+      r2_peri = r2*[cosd(true_a2) sind(true_a2) 0]';
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 2 in font nullfont!
+./matlab.tex:69: Missing $ inserted.
+<inserted text> 
+                $
+l.69 vr2_
+         peri = r2*[cosd(true_a2) sind(true_a2) 0]';
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:71: Missing $ inserted.
+<inserted text> 
+                $
+l.71 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (48.06862pt too wide) in paragraph at lines 69--71
+[]$[]\OML/cmm/m/it/10 eri \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (14.7894pt too wide) in paragraph at lines 69--71
+\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (172.48679pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 2)0][]; \OML/cmm/m/it/10 vv\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 eri \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (31.34845pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 [\OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 h=p \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (76.5295pt too wide) in paragraph at lines 69--71
+\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 h=p \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (16.32297pt too wide) in paragraph at lines 69--71
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (72.71399pt too wide) in paragraph at lines 69--71
+\OML/cmm/m/it/10 cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 2))0][];$ 
+ []
+
+
+./matlab.tex:74: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 d
+      t_days = dt/60/60/24;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+./matlab.tex:74: Missing $ inserted.
+<inserted text> 
+                $
+l.74 dt_
+        days = dt/60/60/24;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:78: Missing $ inserted.
+<inserted text> 
+                $
+l.78 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (50.45337pt too wide) in paragraph at lines 74--78
+[]$[]\OML/cmm/m/it/10 ays \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (105.80582pt too wide) in paragraph at lines 74--78
+\OML/cmm/m/it/10 dt=\OT1/cmr/m/n/10 60\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 60\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 24; \OML/cmm/m/it/10 rot[]arth \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (62.77797pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 7\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 2921151467 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (51.0857pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 10[]5; \OML/cmm/m/it/10 tu\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (124.69914pt too wide) in paragraph at lines 74--78
+\OML/cmm/m/it/10 juliandate\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 datetime\OT1/cmr/m/n/10 ([]2019 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (17.77783pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 03 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (25.55556pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 0603 :
+ []
+
+
+Overfull \hbox (15.55553pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 00 :
+ []
+
+
+Overfull \hbox (28.36119pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 00[])) \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (64.33574pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 2451545; \OML/cmm/m/it/10 tu\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (124.69914pt too wide) in paragraph at lines 74--78
+\OML/cmm/m/it/10 juliandate\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 datetime\OT1/cmr/m/n/10 ([]2019 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (17.77783pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 03 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (25.55556pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 0603 :
+ []
+
+
+Overfull \hbox (15.55553pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 00 :
+ []
+
+
+Overfull \hbox (28.36119pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 00[])) \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (37.7779pt too wide) in paragraph at lines 74--78
+\OT1/cmr/m/n/10 2451545;$ 
+ []
+
+
+./matlab.tex:79: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 t
+      heta_era1 = 2*pi*(0.7790572732640 + 1.00273781191135448*tu1);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+./matlab.tex:79: Missing $ inserted.
+<inserted text> 
+                $
+l.79 theta_
+           era1 = 2*pi*(0.7790572732640 + 1.00273781191135448*tu1);
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:83: Missing $ inserted.
+<inserted text> 
+                $
+l.83 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (49.9249pt too wide) in paragraph at lines 79--83
+[]$[]\OML/cmm/m/it/10 ra\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (13.4764pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (84.4447pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7790572732640 +
+ []
+
+
+Overfull \hbox (97.77808pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 00273781191135448 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (75.51988pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 tu\OT1/cmr/m/n/10 1); \OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (79.46092pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 mod\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (17.3653pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 pi\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (85.77171pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 180\OML/cmm/m/it/10 =pi\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (13.4764pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (84.4447pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 7790572732640 +
+ []
+
+
+Overfull \hbox (97.77808pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 00273781191135448 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (75.51988pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 tu\OT1/cmr/m/n/10 2); \OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (79.46092pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 mod\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (17.3653pt too wide) in paragraph at lines 79--83
+\OML/cmm/m/it/10 pi\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.25423pt too wide) in paragraph at lines 79--83
+\OT1/cmr/m/n/10 180\OML/cmm/m/it/10 =pi\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:84: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 e
+      ci_ecef1 = rot_eci_ecef(theta_era1);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+./matlab.tex:84: Missing $ inserted.
+<inserted text> 
+                $
+l.84 eci_
+         ecef1 = rot_eci_ecef(theta_era1);
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:88: Missing $ inserted.
+<inserted text> 
+                $
+l.88 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (54.80573pt too wide) in paragraph at lines 84--88
+[]$[]\OML/cmm/m/it/10 cef\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (146.31696pt too wide) in paragraph at lines 84--88
+\OML/cmm/m/it/10 rot[]ci[]cef\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 1); \OML/cmm/m/it/10 eci[]cef\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (143.88338pt too wide) in paragraph at lines 84--88
+\OML/cmm/m/it/10 rot[]ci[]cef\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 2); \OML/cmm/m/it/10 vr\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 cef \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (41.67918pt too wide) in paragraph at lines 84--88
+\OML/cmm/m/it/10 eci[]cef\OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (76.30771pt too wide) in paragraph at lines 84--88
+\OML/cmm/m/it/10 vr\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 ci\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 vr\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 cef \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (41.67918pt too wide) in paragraph at lines 84--88
+\OML/cmm/m/it/10 eci[]cef\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (29.83998pt too wide) in paragraph at lines 84--88
+\OML/cmm/m/it/10 vr\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 ci\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:88: LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 
+     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+./matlab.tex:90: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.90 a
+      lpha1 = atan2d(cosd(inc)*sind(AOL1),cosd(AOL1));
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+./matlab.tex:92: Missing $ inserted.
+<inserted text> 
+                $
+l.92 theta_
+           gr1 = theta_era1+180/pi*rot_earth*0;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:94: Missing $ inserted.
+<inserted text> 
+                $
+l.94 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 90--94
+[]
+ []
+
+
+Overfull \hbox (24.99734pt too wide) in paragraph at lines 90--94
+[]\OML/cmm/m/it/10 r\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (50.07315pt too wide) in paragraph at lines 90--94
+\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 1 +
+ []
+
+
+Overfull \hbox (33.47646pt too wide) in paragraph at lines 90--94
+\OT1/cmr/m/n/10 180\OML/cmm/m/it/10 =pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (41.98979pt too wide) in paragraph at lines 90--94
+\OML/cmm/m/it/10 rot[]arth \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (57.36774pt too wide) in paragraph at lines 90--94
+\OT1/cmr/m/n/10 0; \OML/cmm/m/it/10 theta[]r\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (50.07315pt too wide) in paragraph at lines 90--94
+\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 2 +
+ []
+
+
+Overfull \hbox (33.47646pt too wide) in paragraph at lines 90--94
+\OT1/cmr/m/n/10 180\OML/cmm/m/it/10 =pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (41.98979pt too wide) in paragraph at lines 90--94
+\OML/cmm/m/it/10 rot[]arth \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (11.59377pt too wide) in paragraph at lines 90--94
+\OML/cmm/m/it/10 dt\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:95: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 l
+      at1 = asind(vr1_ecef(3)/r1);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no 1 in font nullfont!
+./matlab.tex:95: Missing $ inserted.
+<inserted text> 
+                $
+l.95 lat1 = asind(vr1_
+                      ecef(3)/r1);
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:100: Missing $ inserted.
+<inserted text> 
+                $
+l.100 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 95--100
+[]
+ []
+
+
+Overfull \hbox (89.86487pt too wide) in paragraph at lines 95--100
+[]\OML/cmm/m/it/10 cef\OT1/cmr/m/n/10 (3)\OML/cmm/m/it/10 =r\OT1/cmr/m/n/10 1); \OML/cmm/m/it/10 long\OT1/cmr/m/n/10 1 =
+ []
+
+
+Overfull \hbox (37.323pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 alpha\OT1/cmr/m/n/10 1 +
+ []
+
+
+Overfull \hbox (39.57295pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 RAAN \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (69.44531pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 theta[]r\OT1/cmr/m/n/10 1; \OML/cmm/m/it/10 lat\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (133.3749pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 asind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 vr\OT1/cmr/m/n/10 2[]\OML/cmm/m/it/10 cef\OT1/cmr/m/n/10 (3)\OML/cmm/m/it/10 =r\OT1/cmr/m/n/10 2); \OML/cmm/m/it/10 long\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (37.323pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 alpha\OT1/cmr/m/n/10 2 +
+ []
+
+
+Overfull \hbox (39.57295pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 RAAN \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (76.52635pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 theta[]r\OT1/cmr/m/n/10 2; \OML/cmm/m/it/10 long\OT1/cmr/m/n/10 2 =
+ []
+
+
+Overfull \hbox (80.7687pt too wide) in paragraph at lines 95--100
+\OML/cmm/m/it/10 mod\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 long\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 360);$ 
+ []
+
+
+./matlab.tex:104: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 t
+       rue_a_array = linspace(true_a1, true_a2+360, 1000);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no e in font nullfont!
+./matlab.tex:104: Missing $ inserted.
+<inserted text> 
+                $
+l.104 true_
+           a_array = linspace(true_a1, true_a2+360, 1000);
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:104: Double subscript.
+l.104 true_a_
+             array = linspace(true_a1, true_a2+360, 1000);
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:105: Double subscript.
+l.105 r_array = p./(1+e*cosd(true_a_
+                                    array));
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:107: Double subscript.
+l.107 E_array = 2*atand(tand(true_a_
+                                    array/2)/sqrt((1+e)/(1-e)));
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:109: Missing $ inserted.
+<inserted text> 
+                $
+l.109 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (60.35703pt too wide) in paragraph at lines 104--109
+[]$[][]\OML/cmm/m/it/10 rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (109.9656pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 linspace\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[]\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; true[]\OT1/cmr/m/n/10 2 +
+ []
+
+
+Overfull \hbox (87.80879pt too wide) in paragraph at lines 104--109
+\OT1/cmr/m/n/10 360\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1000); \OML/cmm/m/it/10 r[]rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (29.47577pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 p:=\OT1/cmr/m/n/10 (1 +
+ []
+
+
+Overfull \hbox (9.65628pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (126.66243pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[][]rray\OT1/cmr/m/n/10 )); \OML/cmm/m/it/10 E[]rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.00003pt too wide) in paragraph at lines 104--109
+\OT1/cmr/m/n/10 2 \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (159.21042pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 atand\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 tand\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 true[][]rray=\OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 =sqrt\OT1/cmr/m/n/10 ((1 +
+ []
+
+
+Overfull \hbox (30.2119pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (78.22893pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 e\OT1/cmr/m/n/10 ))); \OML/cmm/m/it/10 E[]rray[]ad \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (37.34583pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 E[]rray \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.25423pt too wide) in paragraph at lines 104--109
+\OML/cmm/m/it/10 pi=\OT1/cmr/m/n/10 180;$ 
+ []
+
+
+./matlab.tex:110: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.110 d
+       t_array = sqrt(a^3/MU)*(E_array_rad - E1_rad - (e*sin(E_array_rad) - ...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+./matlab.tex:110: Missing $ inserted.
+<inserted text> 
+                $
+l.110 dt_
+         array = sqrt(a^3/MU)*(E_array_rad - E1_rad - (e*sin(E_array_rad) - ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:111: Missing $ inserted.
+<inserted text> 
+                $
+l.111 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (55.51938pt too wide) in paragraph at lines 110--111
+[]$[]\OML/cmm/m/it/10 rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (63.61487pt too wide) in paragraph at lines 110--111
+\OML/cmm/m/it/10 sqrt\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a[]=MU\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (58.57274pt too wide) in paragraph at lines 110--111
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[]rray[]ad \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (35.65514pt too wide) in paragraph at lines 110--111
+\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 ad \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (13.54518pt too wide) in paragraph at lines 110--111
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (76.59662pt too wide) in paragraph at lines 110--111
+\OML/cmm/m/it/10 sin\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E[]rray[]ad\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (9.65628pt too wide) in paragraph at lines 110--111
+\OML/cmm/m/it/10 e \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (60.3457pt too wide) in paragraph at lines 110--111
+\OML/cmm/m/it/10 sin\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 E\OT1/cmr/m/n/10 1[]\OML/cmm/m/it/10 ad\OT1/cmr/m/n/10 )));$ 
+ []
+
+
+./matlab.tex:112: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 t
+       heta_era = theta_era1;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+./matlab.tex:112: Missing $ inserted.
+<inserted text> 
+                $
+l.112 theta_
+            era = theta_era1;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:114: Missing $ inserted.
+<inserted text> 
+                $
+l.114 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (44.92488pt too wide) in paragraph at lines 112--114
+[]$[]\OML/cmm/m/it/10 ra \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (114.34914pt too wide) in paragraph at lines 112--114
+\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 1; \OML/cmm/m/it/10 theta[]r[]rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (45.07314pt too wide) in paragraph at lines 112--114
+\OML/cmm/m/it/10 theta[]ra \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (33.47646pt too wide) in paragraph at lines 112--114
+\OT1/cmr/m/n/10 180\OML/cmm/m/it/10 =pi \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (41.98979pt too wide) in paragraph at lines 112--114
+\OML/cmm/m/it/10 rot[]arth \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (36.55763pt too wide) in paragraph at lines 112--114
+\OML/cmm/m/it/10 dt[]rray\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:116: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.116 t
+       heta_array = AOP + true_a_array;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+./matlab.tex:116: Missing $ inserted.
+<inserted text> 
+                $
+l.116 theta_
+            array = AOP + true_a_array;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:116: Double subscript.
+l.116 theta_array = AOP + true_a_
+                                 array;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:118: Missing $ inserted.
+<inserted text> 
+                $
+l.118 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (55.51938pt too wide) in paragraph at lines 116--118
+[]$[]\OML/cmm/m/it/10 rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (30.9924pt too wide) in paragraph at lines 116--118
+\OML/cmm/m/it/10 AOP \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (100.6242pt too wide) in paragraph at lines 116--118
+\OML/cmm/m/it/10 true[][]rray\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 lat[]rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (74.40733pt too wide) in paragraph at lines 116--118
+\OML/cmm/m/it/10 asind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 inc\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (81.67416pt too wide) in paragraph at lines 116--118
+\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]rray\OT1/cmr/m/n/10 ));$ 
+ []
+
+
+./matlab.tex:119: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 a
+       lpha_array = atan2d(cosd(inc)*sind(theta_array),cosd(theta_array));
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no a in font nullfont!
+./matlab.tex:119: Missing $ inserted.
+<inserted text> 
+                $
+l.119 alpha_
+            array = atan2d(cosd(inc)*sind(theta_array),cosd(theta_array));
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:121: Missing $ inserted.
+<inserted text> 
+                $
+l.121 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (55.51938pt too wide) in paragraph at lines 119--121
+[]$[]\OML/cmm/m/it/10 rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (79.89903pt too wide) in paragraph at lines 119--121
+\OML/cmm/m/it/10 atan\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 inc\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (216.8392pt too wide) in paragraph at lines 119--121
+\OML/cmm/m/it/10 sind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]rray\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; cosd\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]rray\OT1/cmr/m/n/10 )); \OML/cmm/m/it/10 long[]rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (57.28685pt too wide) in paragraph at lines 119--121
+\OML/cmm/m/it/10 alpha[]rray \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (39.57295pt too wide) in paragraph at lines 119--121
+\OML/cmm/m/it/10 RAAN \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (59.83165pt too wide) in paragraph at lines 119--121
+\OML/cmm/m/it/10 theta[]r[]rray\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:122: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.122 f
+       igure; hold on;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no " in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no " in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no " in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no " in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 5 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+./matlab.tex:124: Missing $ inserted.
+<inserted text> 
+                $
+l.124 geoshow(lat_
+                  array, long_array,'Color','red');
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:126: Missing $ inserted.
+<inserted text> 
+                $
+l.126 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 122--126
+[]
+ []
+
+
+Overfull \hbox (543.83986pt too wide) in paragraph at lines 122--126
+[]\OML/cmm/m/it/10 rray; long[]rray;[] Color[];[] red[]\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 geoshow\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 lat[]rray\OT1/cmr/m/n/10 (1)\OML/cmm/m/it/10 ; long[]rray\OT1/cmr/m/n/10 (1)\OML/cmm/m/it/10 ;[] DisplayType[];[] Point[];[] Marker[];[] x[];[] Markersize[]; \OT1/cmr/m/n/10 20);$ 
+ []
+
+
+./matlab.tex:132: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 m
+       in_elevation = 10; %deg
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no m in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+./matlab.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 min_
+          elevation = 10; %deg
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:137: Double subscript.
+l.137 vr_e_
+           gs = [0 0 radius_e+h_gs]'; %km
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:138: Missing $ inserted.
+<inserted text> 
+                $
+l.138 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (71.08418pt too wide) in paragraph at lines 132--138
+[]$[]\OML/cmm/m/it/10 levation \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (58.4314pt too wide) in paragraph at lines 132--138
+\OT1/cmr/m/n/10 10; \OML/cmm/m/it/10 radius[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (56.41751pt too wide) in paragraph at lines 132--138
+\OT1/cmr/m/n/10 6378; \OML/cmm/m/it/10 lat[]s \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (65.91756pt too wide) in paragraph at lines 132--138
+\OT1/cmr/m/n/10 34\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 54; \OML/cmm/m/it/10 long[]s \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (67.87935pt too wide) in paragraph at lines 132--138
+\OT1/cmr/m/n/10 112\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 4685; \OML/cmm/m/it/10 h[]s \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (56.12941pt too wide) in paragraph at lines 132--138
+\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 64; \OML/cmm/m/it/10 vr[][]s \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (53.98706pt too wide) in paragraph at lines 132--138
+\OT1/cmr/m/n/10 [00\OML/cmm/m/it/10 radius[] \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (23.46266pt too wide) in paragraph at lines 132--138
+\OML/cmm/m/it/10 h[]s\OT1/cmr/m/n/10 ][];$ 
+ []
+
+
+./matlab.tex:139: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 e
+       levation_array = zeros(1,length(r_array));
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+./matlab.tex:139: Missing $ inserted.
+<inserted text> 
+                $
+l.139 elevation_
+                array = zeros(1,length(r_array));
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:145: Missing $ inserted.
+<inserted text> 
+                $
+l.145 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (55.51938pt too wide) in paragraph at lines 139--145
+[]$[]\OML/cmm/m/it/10 rray \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (140.9404pt too wide) in paragraph at lines 139--145
+\OML/cmm/m/it/10 zeros\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r[]rray\OT1/cmr/m/n/10 )); \OML/cmm/m/it/10 fori \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (10.55551pt too wide) in paragraph at lines 139--145
+\OT1/cmr/m/n/10 1 :
+ []
+
+
+Overfull \hbox (99.66765pt too wide) in paragraph at lines 139--145
+\OML/cmm/m/it/10 length\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 r[]rray\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 vr[]th \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (100.28833pt too wide) in paragraph at lines 139--145
+\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 r[]rray\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 )00][]; \OML/cmm/m/it/10 rth[]ci \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (206.58856pt too wide) in paragraph at lines 139--145
+\OML/cmm/m/it/10 rot[]th[]ci\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 RAAN; inc; theta[]rray\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 )); \OML/cmm/m/it/10 eci[]cef \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (133.60556pt too wide) in paragraph at lines 139--145
+\OML/cmm/m/it/10 rot[]ci[]cef\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 theta[]ra\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 vr[]cef \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (36.67917pt too wide) in paragraph at lines 139--145
+\OML/cmm/m/it/10 eci[]cef \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.22888pt too wide) in paragraph at lines 139--145
+\OML/cmm/m/it/10 rth[]ci \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (26.29633pt too wide) in paragraph at lines 139--145
+\OML/cmm/m/it/10 vr[]th\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:146: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.146     e
+           cef_sez = rot_ecef_sez(long_gs, lat_gs);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+./matlab.tex:146: Missing $ inserted.
+<inserted text> 
+                $
+l.146     ecef_
+               sez = rot_ecef_sez(long_gs, lat_gs);
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:148: Missing $ inserted.
+<inserted text> 
+                $
+l.148 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (44.5764pt too wide) in paragraph at lines 146--148
+[]$[]\OML/cmm/m/it/10 ez \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (145.96033pt too wide) in paragraph at lines 146--148
+\OML/cmm/m/it/10 rot[]cef[]ez\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 long[]s; lat[]s\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 vr[]ez \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (37.55685pt too wide) in paragraph at lines 146--148
+\OML/cmm/m/it/10 ecef[]ez \OMS/cmsy/m/n/10 ^^C
+ []
+
+
+Overfull \hbox (31.74557pt too wide) in paragraph at lines 146--148
+\OML/cmm/m/it/10 vr[]cef\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:149: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149     v
+           r_e_sc = vr_sez;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+./matlab.tex:149: Missing $ inserted.
+<inserted text> 
+                $
+l.149     vr_
+             e_sc = vr_sez;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:149: Double subscript.
+l.149     vr_e_
+               sc = vr_sez;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:150: Missing $ inserted.
+<inserted text> 
+                $
+l.150 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (43.4515pt too wide) in paragraph at lines 149--150
+[]$[][]\OML/cmm/m/it/10 c \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (26.51627pt too wide) in paragraph at lines 149--150
+\OML/cmm/m/it/10 vr[]ez\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:151: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151     v
+           r_gs_sc = vr_e_sc - vr_e_gs;
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no v in font nullfont!
+Missing character: There is no r in font nullfont!
+./matlab.tex:151: Missing $ inserted.
+<inserted text> 
+                $
+l.151     vr_
+             gs_sc = vr_e_sc - vr_e_gs;
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:151: Double subscript.
+l.151     vr_gs_sc = vr_e_
+                          sc - vr_e_gs;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:151: Double subscript.
+l.151     vr_gs_sc = vr_e_sc - vr_e_
+                                    gs;
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./matlab.tex:152: Missing $ inserted.
+<inserted text> 
+                $
+l.152 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (48.49734pt too wide) in paragraph at lines 151--152
+[]$[]\OML/cmm/m/it/10 s[]c \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (30.39139pt too wide) in paragraph at lines 151--152
+\OML/cmm/m/it/10 vr[][]c \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (26.12944pt too wide) in paragraph at lines 151--152
+\OML/cmm/m/it/10 vr[][]s\OT1/cmr/m/n/10 ;$ 
+ []
+
+
+./matlab.tex:153: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.153     e
+           levation_array(i) = asind(vr_gs_sc(3)/norm(vr_gs_sc));
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+./matlab.tex:153: Missing $ inserted.
+<inserted text> 
+                $
+l.153     elevation_
+                    array(i) = asind(vr_gs_sc(3)/norm(vr_gs_sc));
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:155: Missing $ inserted.
+<inserted text> 
+                $
+l.155 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (66.74231pt too wide) in paragraph at lines 153--155
+[]$[]\OML/cmm/m/it/10 rray\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 i\OT1/cmr/m/n/10 ) =
+ []
+
+
+Overfull \hbox (158.00499pt too wide) in paragraph at lines 153--155
+\OML/cmm/m/it/10 asind\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 vr[]s[]c\OT1/cmr/m/n/10 (3)\OML/cmm/m/it/10 =norm\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 vr[]s[]c\OT1/cmr/m/n/10 )); \OML/cmm/m/it/10 end$ 
+ []
+
+
+./matlab.tex:156: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 f
+       igure(2)
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+./matlab.tex:158: Missing $ inserted.
+<inserted text> 
+                $
+l.158 plot(dt_
+              array, elevation_array)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:171: Missing $ inserted.
+<inserted text> 
+                $
+l.171 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 156--171
+[]
+ []
+
+
+Overfull \hbox (508.97984pt too wide) in paragraph at lines 156--171
+[]\OML/cmm/m/it/10 rray; elevation[]rray\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 line\OT1/cmr/m/n/10 ([0\OML/cmm/m/it/10 dt[]rray\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 end\OT1/cmr/m/n/10 )]\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 [1010]\OML/cmm/m/it/10 ;[] Color[]; \OT1/cmr/m/n/10 [0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 780\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 430\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 02])\OML/cmm/m/it/10 xlabel\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 Time\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )[])\OML/cmm/m/it/10 ylabel\OT1/cmr/m/n/10 ([]\OML/cmm/m/it/10 Elevation\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^N\OT1/cmr/m/n/10 )[])\OML/cmm/m/it/10 q \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (122.92714pt too wide) in paragraph at lines 156--171
+\OT1/cmr/m/n/10 1; \OML/cmm/m/it/10 whileelevation[]rray\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q\OT1/cmr/m/n/10 ) \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (25.37845pt too wide) in paragraph at lines 156--171
+\OT1/cmr/m/n/10 10\OML/cmm/m/it/10 q \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (12.60071pt too wide) in paragraph at lines 156--171
+\OML/cmm/m/it/10 q \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (77.92787pt too wide) in paragraph at lines 156--171
+\OT1/cmr/m/n/10 1; \OML/cmm/m/it/10 endtime[]tart \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (97.37445pt too wide) in paragraph at lines 156--171
+\OML/cmm/m/it/10 dt[]rray\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 q\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 time[]nd \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (160.52608pt too wide) in paragraph at lines 156--171
+\OML/cmm/m/it/10 dt[]rray\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 end\OT1/cmr/m/n/10 ); \OML/cmm/m/it/10 time[]bove[]inimum \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (43.77177pt too wide) in paragraph at lines 156--171
+\OML/cmm/m/it/10 time[]nd \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (170.39983pt too wide) in paragraph at lines 156--171
+\OML/cmm/m/it/10 time[]tart\OT1/cmr/m/n/10 ; \OML/cmm/m/it/10 time[]bove[]inimum[]ours \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (120.8829pt too wide) in paragraph at lines 156--171
+\OML/cmm/m/it/10 time[]bove[]inimum=\OT1/cmr/m/n/10 60\OML/cmm/m/it/10 =\OT1/cmr/m/n/10 60;$ 
+ []
+
+
+./matlab.tex:174: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 f
+       unction A = rot_rth_eci(o,i,t)
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+./matlab.tex:174: Missing $ inserted.
+<inserted text> 
+                $
+l.174 function A = rot_
+                       rth_eci(o,i,t)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:175: Missing $ inserted.
+<inserted text> 
+                $
+l.175 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 174--175
+[]
+ []
+
+
+Overfull \hbox (54.43785pt too wide) in paragraph at lines 174--175
+[]\OML/cmm/m/it/10 th[]ci\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 o; i; t\OT1/cmr/m/n/10 )$ 
+ []
+
+
+./matlab.tex:180: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.180 A
+        = [cosd(o)*cosd(t)-sind(o)*cosd(i)*sind(t), -cosd(o)*sind(t)-sind(o)...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no + in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 180--183
+[]
+ []
+
+
+./matlab.tex:184: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.184 e
+       nd
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 184--185
+[] 
+ []
+
+
+./matlab.tex:186: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186 f
+       unction A = rot_eci_ecef(t)
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+./matlab.tex:186: Missing $ inserted.
+<inserted text> 
+                $
+l.186 function A = rot_
+                       eci_ecef(t)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:187: Missing $ inserted.
+<inserted text> 
+                $
+l.187 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 186--187
+[]
+ []
+
+
+Overfull \hbox (42.70592pt too wide) in paragraph at lines 186--187
+[]\OML/cmm/m/it/10 ci[]cef\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )$ 
+ []
+
+
+./matlab.tex:190: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.190 A
+        = [cosd(t), sind(t), 0; -sind(t), cosd(t), 0; 0, 0, 1];
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 190--192
+[]
+ []
+
+
+./matlab.tex:193: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 f
+       unction A = rot_ecef_sez(l,p)
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no f in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+./matlab.tex:193: Missing $ inserted.
+<inserted text> 
+                $
+l.193 function A = rot_
+                       ecef_sez(l,p)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./matlab.tex:194: Missing $ inserted.
+<inserted text> 
+                $
+l.194 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 193--194
+[]
+ []
+
+
+Overfull \hbox (52.62872pt too wide) in paragraph at lines 193--194
+[]\OML/cmm/m/it/10 cef[]ez\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 l; p\OT1/cmr/m/n/10 )$ 
+ []
+
+
+./matlab.tex:198: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.198 A
+        = [sind(p)*cosd(l), sind(p)*sind(l), -cosd(p);
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no A in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no * in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no ) in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 198--201
+[]
+ []
+
+
+./matlab.tex:202: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.202 e
+       nd
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+
+./matlab.tex:203: LaTeX Error: \begin{document} ended by \end{lstlisting}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.203 \end{lstlisting}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> matlab.tex
+              
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 12 strings out of 492649
+ 203 string characters out of 6129622
+ 64042 words of memory out of 5000000
+ 3993 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 18i,4n,12p,125b,117s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

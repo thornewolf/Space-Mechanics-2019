@@ -1,0 +1,143 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\usepackage[numbered]{matlab-prettifier} % including matlab w/ syntax highlighting
+\usepackage[T1]{fontenc} % prettier matlab font
+\lstMakeShortInline[style=Matlab-editor]| % matlab inline escape character
+
+\usepackage[
+top    = 2.75cm,
+bottom = 2.50cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+
+\graphicspath{ {./Figures/} }
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\include{title}
+\pagenumbering{arabic}
+\begin{center}
+\large AE 313 Homework 8
+\end{center}
+\flushleft
+1. Express $\Delta \vec{v}$ in rotating orbit unit vectors $\hat{r}, \hat{\theta} \hat{h}$ as well as inertial unit vectors $\hat{x}, \hat{y}, \hat{z}$.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+vdv_rth = dv*[cosd(beta)*sind(phi) cosd(beta)*cosd(phi) sind(beta)]';
+vdv_eci = rot_rth_eci(RAANm, incm, AOLm) * vdv_rth;
+\end{lstlisting}
+\begin{tabular}{rl}
+  $\Delta \vec{v}_{rth}=$&$<-2.6250,~2.2344,~2.8925> km/s$\\
+  $\Delta \vec{v}_{eci}=$&$<3.9498,~-0.8593,~1.9776> km/s$
+\end{tabular}\\
+\vspace{10px}
+2. Determine the position and velocity immediately after the maneuver, $\vec{r}^+, \vec{v}^+$ in the intertial coordinate system.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+vrp_eci = vrm_eci;
+vvp_eci = vvm_eci + vdv_eci;
+\end{lstlisting}
+\begin{tabular}{rl}
+  $\vec{r}^+_{eci}=$&$<-5.9784,~-4.6680,~-0.1583> \cdot 10^3 km$\\
+  $\vec{v}^+_{eci}=$&$<11.6963,~-5.4791,~-1.1101> km/s$
+\end{tabular}\\
+\vspace{10px}
+3. Compute the orbital elements $e^+,~i^+,~\Omega^+,~\theta^+,~\theta^{^*+}$ in the new orbit.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+FPAp = asind(dot(vrp_eci,vvp_eci)/(norm(vrp_eci)*norm(vvp_eci)));
+...
+true_ap = 360 - true_ap;
+\end{lstlisting}
+\begin{tabular}{rl}
+  $e^+=$ & $2.0151$\\
+  $i^+=$ & $6.2208^\circ$\\
+  $\Omega^+=$ & $26.9440^\circ$\\
+  $\theta^+=$ & $191.1029^\circ$\\
+  $\theta^{^*+}=$ & $320.4327^\circ$\\
+\end{tabular}\\
+\vspace{10px}
+4. Find the changes in the elements (including the sign) that occured due to the maneuver, that is, $\Delta e,~\Delta i,~\Delta \Omega,~\Delta \theta$.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+de = ep-em;
+dinc = incp-incm;
+dRAAN = RAANp-RAANm;
+dAOL = AOLp-AOLm;
+\end{lstlisting}
+\begin{tabular}{rl}
+  $\Delta e=$ & $1.2501$\\
+  $\Delta i=$ & $-14.3792^\circ$\\
+  $\Delta \Omega=$ & $-7.8560^\circ$\\
+  $\Delta \theta=$ & $7.7029^\circ$\\
+\end{tabular}\\
+\vspace{10px}
+5. Confirm the position, $ $m and new orbital elements (problem 3) in GMAT. Plot the original and new orbit (include XY plane and inertial unit vectors). Mark the maneuver location on the plot.\\
+\begin{tabular}{rl}
+  $\vec{v}^-_{eci}=$&$<7.7465,~-4.6198,~-3.0877> km/s$\\
+  $\vec{v}^+_{eci}=$&$<12.026,~-5.1957,~-1.0988> km/s$
+\end{tabular}\\
+The data in the GMAT orbit is very close to the MATLAB calculations and therefore matches the data from MATLAB calculations.\\
+\vspace{10px}
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.2]{GMAT}
+  \caption{GMAT Plot of Orbits}
+  \label{fig:temp}
+\end{figure}
+Turquoise indicates the maneuver point. Clearer view of the maneuver after the code.\\
+\vspace{10px}
+6. Would you want to perform this maneuver? Why or why not?\\
+I would not want to perform this maneuver because it results in a
+massively hyperbolic orbit. The goal of the maneuver is to do an orbital
+correction, not enter an escape trajectory. With an eccentricity of 2.02,
+the orbit is very far from being elliptical.
+\begin{tabular}{rl}
+\end{tabular}\\
+\vspace{10px}
+7. Given that the semi-major axes of bi-elliptical transfer are $a_{T1}=6659~km$ and $a_{T2}=6798~km$, what is the departure phase angle? Include a figure/sketch of the phase angle.\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+at1 = 6658;
+at2 = 6798;
+a_sc = 6378+430;
+TOF = pi*(sqrt(at1^3/MU('Earth'))+sqrt(at2^3/MU('Earth')));
+n_sc = sqrt(MU('Earth')/a_sc^3);
+phase = 2*pi-n_sc*TOF;
+phase = phase*180/pi;
+\end{lstlisting}
+\begin{tabular}{rl}
+  $\Delta \Phi=$ & $6.3124^\circ$
+\end{tabular}\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.9]{p7}
+  \caption{Sketch of the Phase Angle}
+  \label{fig:temp}
+\end{figure}
+\newpage
+8. Survey.\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.3]{survey}
+  \caption{Survey Screenshot}
+  \label{fig:temp}
+\end{figure}
+\newpage
+\input{matlab}
+\newpage
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.9]{GMAT2}
+  \caption{GMAT Modified}
+  \label{fig:temp}
+\end{figure}
+Word has changed their background removal functionality such that I cannot get rid of the black. This is a zoomed photo to help if the first one is difficult to read. Turquoise indicates the maneuver point.
+\end{document}

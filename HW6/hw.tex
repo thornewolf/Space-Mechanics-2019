@@ -1,0 +1,78 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\usepackage[numbered]{matlab-prettifier} % including matlab w/ syntax highlighting
+\usepackage[T1]{fontenc} % prettier matlab font
+\lstMakeShortInline[style=Matlab-editor]| % matlab inline escape character
+
+\usepackage[
+top    = 2.75cm,
+bottom = 2.50cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+
+\graphicspath{ {./Figures/} }
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\include{title}
+\pagenumbering{arabic}
+\begin{center}
+\large AE 313 Homework 5
+\end{center}
+\flushleft
+1. When $\theta^*_2 = 280^\circ$, find current $\theta_{ERA}$ and the latitude and longitude.\\
+$\theta_{ERA} = 30.58$\\
+$latitude~\phi = 25.4745^\circ$\\
+$longitude~\lambda = 76.3665^\circ$\\
+\vspace{5px}
+2. For a Prescott ground station what is the elevation and azimuth relative to the ground station? Can the ground station "see" the spacecraft?\\
+$\theta_E = -55.4871^\circ$\\
+$\theta_A = -170.8419^\circ$\\
+The ground station can not "see" the spacecraft due to the fact that $\theta_E$ is negative. This means that it is below the visible horizon.\\
+\vspace{5px}
+3. Use MATLAB to produce the ground track using "geoshow" for the time between the two positions. Confirm the initial and final latitude and longitude.\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.3]{MATLAB}
+  \caption{MATLAB Geoshow Plot}
+  \label{}
+\end{figure}
+Initial latitude and longitude:\\
+$\phi = 35.4143^\circ, \lambda = 96.5763^\circ$\\
+Final latitude and longitude:\\
+$\phi = 25.4745^\circ, \lambda = 76.3665^\circ$\\
+\vspace{5px}
+\newpage
+4. Use GMAT to produce a ground track of the orbit to confirm the MATLAB code.\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.6]{GMAT}
+  \caption{GMAT Spacecraft Plot}
+  \label{}
+\end{figure}
+$\vec{r}_1^{ECI} = -2163.29 \hat{x} + 7099.49 \hat{y} + 3535.94 \hat{z}~km$\\
+$\vec{v}_1^{ECI} = -4.72 \hat{x} - 4.52 \hat{y} + 3.05 \hat{z}~\frac{km}{s}$\\
+\vspace{2px}
+GMAT Initial latitude and longitude:\\
+$\phi = 35.50^\circ, \lambda = 129.73^\circ$\\
+GMAT Final latitude and longitude:\\
+$\phi = 25.56^\circ, \lambda = 76.41^\circ$\\
+The initial latitude is within $0.2^\circ$ but the initial longitude is not. This is unexpected becuase the GMAT final latitudes and longitudes are both within the $0.2^\circ$ limit.
+This difference in initial longitudes is attributed to the fact that the matlab code did not take the rotation of the earth into account. This makes sense because the differe is only seen in the resulting longitude. To fix this error I would need to recalculate the Tu value at each new successive $\theta^*$
+\vspace{5px}
+
+\newpage
+\input{matlab}
+\end{document}
