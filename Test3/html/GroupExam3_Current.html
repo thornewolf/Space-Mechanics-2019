@@ -1,0 +1,404 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>GroupExam3_Current</title><meta name="generator" content="MATLAB 9.5"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2019-04-09"><meta name="DC.source" content="GroupExam3_Current.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Group Exam 3</a></li><li><a href="#2">Preamble</a></li><li><a href="#3">Given</a></li><li><a href="#4">Problem 1</a></li><li><a href="#6">Problem 2</a></li><li><a href="#7">Problem 3</a></li><li><a href="#9">Problem 4</a></li><li><a href="#11">Problem 5</a></li><li><a href="#13">Problem 6</a></li><li><a href="#15">Problem 7</a></li><li><a href="#17">Function Definitions</a></li><li><a href="#18">End</a></li></ul></div><h2 id="1">Group Exam 3</h2><pre class="codeinput">clear; clc;
+<span class="comment">% AE313 - Due: 4/10/19</span>
+<span class="comment">% Grace Day, JiYoung Hwang, Aaron Scott, Thorne Wolfenbarger</span>
+</pre><h2 id="2">Preamble</h2><pre class="codeinput">bodies = { <span class="string">'Earth'</span>, <span class="string">'Mars'</span>, <span class="string">'Sun'</span> };
+gravParams = [ 398600, 42828, 132712440000 ];
+radii = [ 6378, 3397, 695990 ];
+sma = [149600000, 227920000, 0];
+mu = containers.Map(bodies, gravParams); <span class="comment">% (km^3/s^2) Gravitational parameter</span>
+R = containers.Map(bodies, radii); <span class="comment">% (km) Mean equitorial radius</span>
+a = containers.Map(bodies, sma); <span class="comment">% (km) Semi-major axis</span>
+</pre><h2 id="3">Given</h2><pre class="codeinput">aInit = 5744; <span class="comment">% km --</span>
+eInit = 0.3842; <span class="comment">% --</span>
+raanInit = 321.7; <span class="comment">% degrees --</span>
+aopInit = 303.2; <span class="comment">% degrees --</span>
+incInit = 74.77; <span class="comment">% degrees --</span>
+aolInit = 203.9; <span class="comment">% degrees --</span>
+</pre><h2 id="4">Problem 1</h2><pre class="codeinput"><span class="comment">% Find the current position and velocity (r1, v1) vectors in Mars</span>
+<span class="comment">% equatorial inertial system (x - y - z), as well as the initial flight</span>
+<span class="comment">% path angle.</span>
+taInit = aolInit - aopInit; <span class="comment">% Initial true anomaly value</span>
+A = RTHtoMCI(raanInit, aolInit, incInit);
+B = EPHtoRTH(taInit);
+pInit = aInit*(1-eInit^2);
+rInit = pInit/(1+eInit*cosd(taInit));
+vr1_RTHBefore = [rInit; 0; 0];
+vr1_MCIBefore = A*vr1_RTHBefore;
+vv1_EPHBefore = sqrt(mu(<span class="string">'Mars'</span>)/pInit)*[ -sind(taInit); eInit + cosd(taInit); 0 ];
+vv1_RTHBefore = B*vv1_EPHBefore;
+vv1_MCIBefore = A*vv1_RTHBefore;
+v1 = norm(vv1_MCIBefore);
+fpa1 = atan2d(rInit*eInit*sind(taInit), pInit);
+</pre><pre class="codeinput">fprintf(<span class="string">'Problem 1:\n'</span>)
+fprintf(<span class="string">'Initial Radius in Mars Centered Inertial (MCI): %g %g %g km \n'</span>,vr1_MCIBefore)
+fprintf(<span class="string">'Initial Velocity in Mars Centered Inertial (MCI): %g %g %g km \n'</span>,vv1_MCIBefore)
+</pre><pre class="codeoutput">Problem 1:
+Initial Radius in Mars Centered Inertial (MCI): -4089.79 2521.97 -2040.66 km 
+Initial Velocity in Mars Centered Inertial (MCI): 1.34759 -1.76112 -2.00867 km 
+</pre><h2 id="6">Problem 2</h2><pre class="codeinput"><span class="comment">% The first burn is an in-plane burn with |deltaV1| = 0.14 km/s and alpha1</span>
+<span class="comment">% = 45 degrees. Draw the vector diagram.</span>
+
+deltaV1 = 0.14; <span class="comment">%km/s --</span>
+alpha1 = 45; <span class="comment">%degrees --</span>
+</pre><h2 id="7">Problem 3</h2><pre class="codeinput"><span class="comment">% Find the velocity (magnitude) and flight path angle immediately after the</span>
+<span class="comment">% first maneuver.</span>
+r1After = rInit;
+v1After = sqrt(deltaV1^2 + v1^2 - 2*deltaV1*v1*cosd(180-alpha1));
+dfpa = asind(sind(180-alpha1)/v1After * deltaV1);
+fpaAfter = fpa1 + dfpa;
+</pre><pre class="codeinput">fprintf(<span class="string">'Problem 3:\n'</span>)
+fprintf(<span class="string">'Velocity magnitude: %g \n'</span>,v1After)
+fprintf(<span class="string">'Flight Path Angle: %g \n'</span>, fpaAfter)
+</pre><pre class="codeoutput">Problem 3:
+Velocity magnitude: 3.09262 
+Flight Path Angle: -20.1766 
+</pre><h2 id="9">Problem 4</h2><pre class="codeinput"><span class="comment">% Wait until MAVEN reaches TA = 240 degrees in the new orbit before</span>
+<span class="comment">% implementing the final maneuver. What is the new position and velocity</span>
+<span class="comment">% (r2, v2) in the Mars equatorial inertial coordinate system (x - y - z)?</span>
+
+ta1After = atan2d(r1After*v1After^2/mu(<span class="string">'Mars'</span>)*sind(fpaAfter)*cosd(fpaAfter), r1After*v1After^2/mu(<span class="string">'Mars'</span>)*cosd(fpaAfter)^2-1);
+ta2Before = 240; <span class="comment">% (deg) final true anomaly</span>
+syms <span class="string">a2Before</span>
+a2Before = double(solve(-mu(<span class="string">'Mars'</span>)/(2*a2Before) == v1After^2/2 - mu(<span class="string">'Mars'</span>)/r1After, a2Before));
+e2Before = double(sqrt((r1After*v1After^2/mu(<span class="string">'Mars'</span>)-1)^2*cosd(fpaAfter)^2+sind(fpaAfter)^2));
+p2Before = (a2Before)*(1 - e2Before^2);
+h2Before = sqrt(mu(<span class="string">'Mars'</span>)*p2Before);
+i2Before = incInit;
+raan2Before = raanInit;
+r2Before = p2Before/(1+e2Before*cosd(ta2Before));
+rHat2Before =  vr1_MCIBefore/norm(vr1_MCIBefore);
+hHat2Before = cross(vr1_MCIBefore, vv1_MCIBefore) / norm(cross(vr1_MCIBefore, vv1_MCIBefore));
+thetaHat2Before = cross(hHat2Before, rHat2Before);
+aol2Before = asind(rHat2Before(3)/sind(i2Before));
+aol2BeforeCheck = acosd(thetaHat2Before(3)/sind(i2Before)); <span class="comment">% Choosing pos. value</span>
+aol2Before = aol2BeforeCheck;
+deltaAOP1 = taInit - ta1After; <span class="comment">% (deg) change in argument of periapsis of transfer</span>
+aop2After = aopInit + deltaAOP1; <span class="comment">% (deg) argument of periapsis of transfer</span>
+aol2After = ta2Before + aop2After; <span class="comment">% (deg) argument of latittude of transfer</span>
+A2 = RTHtoMCI(raanInit, aol2After, incInit);
+B2 = EPHtoRTH(ta2Before);
+vv2_RTHBefore = [h2Before*e2Before/p2Before*sind(ta2Before) h2Before/r2Before 0]';
+vr2_RTHBefore = [r2Before; 0; 0];
+vr2_MCIBefore = double(A2*vr2_RTHBefore);
+vv2_MCIBefore = double(A2*vv2_RTHBefore);
+</pre><pre class="codeinput">fprintf(<span class="string">'Problem 4:\n'</span>)
+fprintf(<span class="string">'New Radius Vector: %g %g %g \n'</span>,vr2_MCIBefore)
+fprintf(<span class="string">'New Velocity Vector: %g %g %g \n'</span>,vv2_MCIBefore)
+</pre><pre class="codeoutput">Problem 4:
+New Radius Vector: -4916.68 4275.15 1130.48 
+New Velocity Vector: 0.00279181 -0.812068 -2.33442 
+</pre><h2 id="11">Problem 5</h2><pre class="codeinput"><span class="comment">% The next maneuver has |deltaV2| = 0.22 km/s, alpha2 = -20 degrees, and</span>
+<span class="comment">% beta2 = -50 degrees. Find deltaV2 in the Mars equitorial inertial</span>
+<span class="comment">% coordinate system</span>
+syms <span class="string">a2After</span>
+deltaV2 = 0.22; <span class="comment">% --</span>
+alpha2 = -20; <span class="comment">% --</span>
+beta2 = -50; <span class="comment">% --</span>
+h2Before = norm(cross(vr2_MCIBefore, vv2_MCIBefore));
+fpa2Before = atan2d(r2Before*e2Before*sind(ta2Before), p2Before);
+phi = alpha2 + fpa2Before;
+vdeltaV2_RTH = deltaV2*[cosd(beta2)*sind(phi); cosd(beta2)*cosd(phi); sind(beta2)];
+vdeltaV2_MCI = A2*vdeltaV2_RTH;
+</pre><pre class="codeinput">fprintf(<span class="string">'Problem 5:\n'</span>)
+fprintf(<span class="string">'DeltaV in MCI: \n'</span>,vdeltaV2_MCI)
+</pre><pre class="codeoutput">Problem 5:
+DeltaV in MCI: 
+</pre><h2 id="13">Problem 6</h2><pre class="codeinput"><span class="comment">% Determine the new velocity in the Mars equatorial inertial coordinate</span>
+<span class="comment">% system.</span>
+vv2_MCIAfter = vv2_MCIBefore + vdeltaV2_MCI;
+</pre><pre class="codeinput">fprintf(<span class="string">'Problem 6:\n'</span>)
+fprintf(<span class="string">'New Velocity MCI: %g \n'</span>,vv2_MCIAfter)
+</pre><pre class="codeoutput">Problem 6:
+New Velocity MCI: 0.14249 
+New Velocity MCI: -0.755419 
+New Velocity MCI: -2.49466 
+</pre><h2 id="15">Problem 7</h2><pre class="codeinput"><span class="comment">% How have the orbital elements changed from the initial orbit (values</span>
+<span class="comment">% given in the problem statement)? What do these changes mean for the new</span>
+<span class="comment">% orbit?</span>
+syms <span class="string">aFinal</span> <span class="string">eFinal</span>
+
+rHatFinal = vr2_MCIBefore / norm(vr2_MCIBefore);
+hHatFinal = cross(vr2_MCIBefore,vv2_MCIAfter)/norm(cross(vr2_MCIBefore,vv2_MCIAfter));
+thetaHatFinal = cross(hHatFinal,rHatFinal);
+
+hFinal = norm(cross(vr2_MCIBefore,vv2_MCIAfter));
+aFinal = double(solve(-mu(<span class="string">'Mars'</span>)/(2*aFinal) == norm(vv2_MCIAfter)^2/2 - mu(<span class="string">'Mars'</span>)/norm(vr2_MCIBefore), aFinal));
+eFinal = max(double(solve(-mu(<span class="string">'Mars'</span>)^2/(2*hFinal^2) * (1-eFinal^2) == -mu(<span class="string">'Mars'</span>)/(2*aFinal), eFinal)));
+incFinal = acosd(hHatFinal(3)); <span class="comment">% Choose positive value because 0 &lt; i &lt; 180</span>
+raanFinal = acosd(-(hHatFinal(2)/sind(incFinal)));
+raanFinalCheck = asind(hHatFinal(1)/sind(incFinal));
+raanFinal = raanFinalCheck; <span class="comment">% Choose the negative value</span>
+aopFinal = 0; <span class="comment">% degrees --</span>
+aolFinal = 203.9; <span class="comment">% degrees --</span>
+</pre><h2 id="17">Function Definitions</h2><pre class="codeinput"><span class="keyword">function</span> outputMatrix = RTHtoMCI(raan, theta, i)
+    outputMatrix = <span class="keyword">...</span>
+        [ cosd(raan)*cosd(theta) - sind(raan)*cosd(i)*sind(theta) , <span class="keyword">...</span>
+         -cosd(raan)*sind(theta) - sind(raan)*cosd(i)*cosd(theta) , <span class="keyword">...</span>
+          sind(raan)*sind(i) ; <span class="keyword">...</span>
+          sind(raan)*cosd(theta) + cosd(raan)*cosd(i)*sind(theta) , <span class="keyword">...</span>
+         -sind(raan)*sind(theta) + cosd(raan)*cosd(i)*cosd(theta) , <span class="keyword">...</span>
+         -cosd(raan)*sind(i) ; <span class="keyword">...</span>
+          sind(i)*sind(theta) , <span class="keyword">...</span>
+          sind(i)*cosd(theta) , <span class="keyword">...</span>
+          cosd(i) ];
+<span class="keyword">end</span>
+
+<span class="keyword">function</span> outputMatrix = EPHtoRTH(ta)
+    outputMatrix = <span class="keyword">...</span>
+        [ cosd(ta), sind(ta), 0; <span class="keyword">...</span>
+         -sind(ta), cosd(ta), 0; <span class="keyword">...</span>
+                 0,        0, 1; <span class="keyword">...</span>
+        ];
+<span class="keyword">end</span>
+</pre><h2 id="18">End</h2><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Group Exam 3
+clear; clc;
+% AE313 - Due: 4/10/19
+% Grace Day, JiYoung Hwang, Aaron Scott, Thorne Wolfenbarger
+
+%% Preamble
+bodies = { 'Earth', 'Mars', 'Sun' };
+gravParams = [ 398600, 42828, 132712440000 ];
+radii = [ 6378, 3397, 695990 ];
+sma = [149600000, 227920000, 0];
+mu = containers.Map(bodies, gravParams); % (km^3/s^2) Gravitational parameter
+R = containers.Map(bodies, radii); % (km) Mean equitorial radius
+a = containers.Map(bodies, sma); % (km) Semi-major axis
+
+%% Given
+aInit = 5744; % km REPLACE_WITH_DASH_DASH
+eInit = 0.3842; % REPLACE_WITH_DASH_DASH
+raanInit = 321.7; % degrees REPLACE_WITH_DASH_DASH
+aopInit = 303.2; % degrees REPLACE_WITH_DASH_DASH
+incInit = 74.77; % degrees REPLACE_WITH_DASH_DASH
+aolInit = 203.9; % degrees REPLACE_WITH_DASH_DASH
+
+%% Problem 1
+
+% Find the current position and velocity (r1, v1) vectors in Mars
+% equatorial inertial system (x - y - z), as well as the initial flight
+% path angle.
+taInit = aolInit - aopInit; % Initial true anomaly value
+A = RTHtoMCI(raanInit, aolInit, incInit);
+B = EPHtoRTH(taInit);
+pInit = aInit*(1-eInit^2);
+rInit = pInit/(1+eInit*cosd(taInit));
+vr1_RTHBefore = [rInit; 0; 0];
+vr1_MCIBefore = A*vr1_RTHBefore;
+vv1_EPHBefore = sqrt(mu('Mars')/pInit)*[ -sind(taInit); eInit + cosd(taInit); 0 ];
+vv1_RTHBefore = B*vv1_EPHBefore;
+vv1_MCIBefore = A*vv1_RTHBefore;
+v1 = norm(vv1_MCIBefore);
+fpa1 = atan2d(rInit*eInit*sind(taInit), pInit);
+%%
+fprintf('Problem 1:\n')
+fprintf('Initial Radius in Mars Centered Inertial (MCI): %g %g %g km \n',vr1_MCIBefore)
+fprintf('Initial Velocity in Mars Centered Inertial (MCI): %g %g %g km \n',vv1_MCIBefore)
+
+%% Problem 2
+
+% The first burn is an in-plane burn with |deltaV1| = 0.14 km/s and alpha1
+% = 45 degrees. Draw the vector diagram.
+
+deltaV1 = 0.14; %km/s REPLACE_WITH_DASH_DASH
+alpha1 = 45; %degrees REPLACE_WITH_DASH_DASH
+
+%% Problem 3
+
+% Find the velocity (magnitude) and flight path angle immediately after the
+% first maneuver.
+r1After = rInit;
+v1After = sqrt(deltaV1^2 + v1^2 - 2*deltaV1*v1*cosd(180-alpha1));
+dfpa = asind(sind(180-alpha1)/v1After * deltaV1);
+fpaAfter = fpa1 + dfpa;
+
+%%
+fprintf('Problem 3:\n')
+fprintf('Velocity magnitude: %g \n',v1After)
+fprintf('Flight Path Angle: %g \n', fpaAfter)
+
+%% Problem 4
+
+% Wait until MAVEN reaches TA = 240 degrees in the new orbit before
+% implementing the final maneuver. What is the new position and velocity
+% (r2, v2) in the Mars equatorial inertial coordinate system (x - y - z)?
+
+ta1After = atan2d(r1After*v1After^2/mu('Mars')*sind(fpaAfter)*cosd(fpaAfter), r1After*v1After^2/mu('Mars')*cosd(fpaAfter)^2-1);
+ta2Before = 240; % (deg) final true anomaly
+syms a2Before
+a2Before = double(solve(-mu('Mars')/(2*a2Before) == v1After^2/2 - mu('Mars')/r1After, a2Before));
+e2Before = double(sqrt((r1After*v1After^2/mu('Mars')-1)^2*cosd(fpaAfter)^2+sind(fpaAfter)^2));
+p2Before = (a2Before)*(1 - e2Before^2);
+h2Before = sqrt(mu('Mars')*p2Before);
+i2Before = incInit;
+raan2Before = raanInit;
+r2Before = p2Before/(1+e2Before*cosd(ta2Before));
+rHat2Before =  vr1_MCIBefore/norm(vr1_MCIBefore);
+hHat2Before = cross(vr1_MCIBefore, vv1_MCIBefore) / norm(cross(vr1_MCIBefore, vv1_MCIBefore));
+thetaHat2Before = cross(hHat2Before, rHat2Before);
+aol2Before = asind(rHat2Before(3)/sind(i2Before));
+aol2BeforeCheck = acosd(thetaHat2Before(3)/sind(i2Before)); % Choosing pos. value
+aol2Before = aol2BeforeCheck;
+deltaAOP1 = taInit - ta1After; % (deg) change in argument of periapsis of transfer
+aop2After = aopInit + deltaAOP1; % (deg) argument of periapsis of transfer
+aol2After = ta2Before + aop2After; % (deg) argument of latittude of transfer
+A2 = RTHtoMCI(raanInit, aol2After, incInit);
+B2 = EPHtoRTH(ta2Before);
+vv2_RTHBefore = [h2Before*e2Before/p2Before*sind(ta2Before) h2Before/r2Before 0]';
+vr2_RTHBefore = [r2Before; 0; 0];
+vr2_MCIBefore = double(A2*vr2_RTHBefore);
+vv2_MCIBefore = double(A2*vv2_RTHBefore);
+
+%%
+fprintf('Problem 4:\n')
+fprintf('New Radius Vector: %g %g %g \n',vr2_MCIBefore)
+fprintf('New Velocity Vector: %g %g %g \n',vv2_MCIBefore)
+
+%% Problem 5
+
+% The next maneuver has |deltaV2| = 0.22 km/s, alpha2 = -20 degrees, and
+% beta2 = -50 degrees. Find deltaV2 in the Mars equitorial inertial
+% coordinate system
+syms a2After
+deltaV2 = 0.22; % REPLACE_WITH_DASH_DASH
+alpha2 = -20; % REPLACE_WITH_DASH_DASH
+beta2 = -50; % REPLACE_WITH_DASH_DASH
+h2Before = norm(cross(vr2_MCIBefore, vv2_MCIBefore));
+fpa2Before = atan2d(r2Before*e2Before*sind(ta2Before), p2Before);
+phi = alpha2 + fpa2Before;
+vdeltaV2_RTH = deltaV2*[cosd(beta2)*sind(phi); cosd(beta2)*cosd(phi); sind(beta2)];
+vdeltaV2_MCI = A2*vdeltaV2_RTH;
+
+%%
+fprintf('Problem 5:\n')
+fprintf('DeltaV in MCI: \n',vdeltaV2_MCI)
+
+%% Problem 6
+
+% Determine the new velocity in the Mars equatorial inertial coordinate
+% system.
+vv2_MCIAfter = vv2_MCIBefore + vdeltaV2_MCI;
+
+
+%%
+fprintf('Problem 6:\n')
+fprintf('New Velocity MCI: %g \n',vv2_MCIAfter)
+
+%% Problem 7
+
+% How have the orbital elements changed from the initial orbit (values
+% given in the problem statement)? What do these changes mean for the new
+% orbit?
+syms aFinal eFinal
+
+rHatFinal = vr2_MCIBefore / norm(vr2_MCIBefore);
+hHatFinal = cross(vr2_MCIBefore,vv2_MCIAfter)/norm(cross(vr2_MCIBefore,vv2_MCIAfter));
+thetaHatFinal = cross(hHatFinal,rHatFinal);
+
+hFinal = norm(cross(vr2_MCIBefore,vv2_MCIAfter));
+aFinal = double(solve(-mu('Mars')/(2*aFinal) == norm(vv2_MCIAfter)^2/2 - mu('Mars')/norm(vr2_MCIBefore), aFinal));
+eFinal = max(double(solve(-mu('Mars')^2/(2*hFinal^2) * (1-eFinal^2) == -mu('Mars')/(2*aFinal), eFinal)));
+incFinal = acosd(hHatFinal(3)); % Choose positive value because 0 < i < 180
+raanFinal = acosd(-(hHatFinal(2)/sind(incFinal))); 
+raanFinalCheck = asind(hHatFinal(1)/sind(incFinal));
+raanFinal = raanFinalCheck; % Choose the negative value
+aopFinal = 0; % degrees REPLACE_WITH_DASH_DASH
+aolFinal = 203.9; % degrees REPLACE_WITH_DASH_DASH
+
+%%
+
+%% Function Definitions
+
+function outputMatrix = RTHtoMCI(raan, theta, i)
+    outputMatrix = ...
+        [ cosd(raan)*cosd(theta) - sind(raan)*cosd(i)*sind(theta) , ...
+         -cosd(raan)*sind(theta) - sind(raan)*cosd(i)*cosd(theta) , ...
+          sind(raan)*sind(i) ; ...
+          sind(raan)*cosd(theta) + cosd(raan)*cosd(i)*sind(theta) , ...
+         -sind(raan)*sind(theta) + cosd(raan)*cosd(i)*cosd(theta) , ...
+         -cosd(raan)*sind(i) ; ...
+          sind(i)*sind(theta) , ...
+          sind(i)*cosd(theta) , ...
+          cosd(i) ];
+end
+
+function outputMatrix = EPHtoRTH(ta)
+    outputMatrix = ...
+        [ cosd(ta), sind(ta), 0; ...
+         -sind(ta), cosd(ta), 0; ...
+                 0,        0, 1; ...
+        ];
+end
+
+%% End
+##### SOURCE END #####
+--></body></html>

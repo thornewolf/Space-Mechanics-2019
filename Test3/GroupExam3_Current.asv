@@ -21,6 +21,7 @@ incInit = 74.77; % degrees --
 aolInit = 203.9; % degrees --
 
 %% Problem 1
+
 % Find the current position and velocity (r1, v1) vectors in Mars
 % equatorial inertial system (x - y - z), as well as the initial flight
 % path angle.
@@ -29,15 +30,20 @@ A = RTHtoMCI(raanInit, aolInit, incInit);
 B = EPHtoRTH(taInit);
 pInit = aInit*(1-eInit^2);
 rInit = pInit/(1+eInit*cosd(taInit));
-vr1_RTH = [rInit; 0; 0];
-vr1_MCI = A*vr1_RTH;
-vv1_EPH = sqrt(mu('Mars')/pInit)*[ -sind(taInit); eInit + cosd(taInit); 0 ];
-vv1_RTH = B*vv1_EPH;
-vv1_MCI = A*vv1_RTH;
-v1 = norm(vv1_MCI);
+vr1_RTHBefore = [rInit; 0; 0];
+vr1_MCIBefore = A*vr1_RTHBefore;
+vv1_EPHBefore = sqrt(mu('Mars')/pInit)*[ -sind(taInit); eInit + cosd(taInit); 0 ];
+vv1_RTHBefore = B*vv1_EPHBefore;
+vv1_MCIBefore = A*vv1_RTHBefore;
+v1 = norm(vv1_MCIBefore);
 fpa1 = atan2d(rInit*eInit*sind(taInit), pInit);
+%%
+fprintf('Problem 1:\n')
+fprintf('Initial Radius in Mars Centered Inertial (MCI): %g %g %g km \n',vr1_MCIBefore)
+fprintf('Initial Velocity in Mars Centered Inertial (MCI): %g %g %g km \n',vv1_MCIBefore)
 
 %% Problem 2
+
 % The first burn is an in-plane burn with |deltaV1| = 0.14 km/s and alpha1
 % = 45 degrees. Draw the vector diagram.
 
@@ -45,129 +51,106 @@ deltaV1 = 0.14; %km/s --
 alpha1 = 45; %degrees --
 
 %% Problem 3
+
 % Find the velocity (magnitude) and flight path angle immediately after the
 % first maneuver.
-
-cInc = incInit; % It was a planar maneuver
-
-% Can use same rotation matrix for same r-value. Sanity check
 r1After = rInit;
-vr1After_RTH = [r1After; 0; 0];
-vr1After_MCI = A*vr1After_RTH;
-
-% Get dv as a vector in eci
-dv1 = deltaV1;
-beta1 = 0;
-vdv1_VCN = dv1*[cosd(beta1)*cosd(alpha1) cosd(beta1)*sind(alpha1) sind(beta1)]';
-phi1 = fpa1 + alpha1;
-vdv1_RTH = dv1*[cosd(beta1)*sind(phi1) cosd(beta1)*cosd(phi1) sind(beta1)]';
-
-% Need to update the rotation matrix for the new orbit properties
-% Get rth vectors
-rhat = vr1After_MCI/norm(vr1After_MCI);
-h = cross(vr1After_MCI,vv1_MCI);
-hhat = h/norm(h);
-that = cross(hhat,rhat);
-
-
-
-% Calculate new RAAN value
-syms cRAAN
-eq(1) = hhat(1) == sind(cRAAN)*sind(cInc);
-eq(2) = hhat(2) == -cosd(cRAAN)*sind(cInc);
-cRAAN1 = double(solve(eq(1), cRAAN));
-cRAAN2 = double(solve(eq(2), cRAAN));
-% Checks the matching value
-if abs(cRAAN1(1) - cRAAN2(1)) < 0.01 | abs(cRAAN1(1) - cRAAN2(2)) < 0.01
-    cRAAN = cRAAN1(1);
-else
-    cRAAN = cRAAN1(2);
-end
-if cRAAN < 360
-    cRAAN = cRAAN + 360;
-end
-syms cAOL
-eq(1) = rhat(3) == sind(cInc)*sind(cAOL);
-eq(2) = that(3) == sind(cInc)*cosd(cAOL);
-cAOL1 = double(solve(eq(1), cAOL));
-cAOL2 = double(solve(eq(2), cAOL));
-if abs(cAOL1(1) - cAOL2(1)) < 0.01 | abs(cAOL1(1) - cAOL2(2)) < 0.01
-    cAOL = cAOL1(1)
-else
-    cAOL = cAOL1(2)
-end
-
-A = RTHtoMCI(cRAAN, cAOL, cInc);
-
 v1After = sqrt(deltaV1^2 + v1^2 - 2*deltaV1*v1*cosd(180-alpha1));
-vv1After_RTH =[v1After; 0; 0];
-vv1After_MCI = A*vv1After_RTH; %Incorrect but magnitude is correct
-vdv1_MCI = A*vdv1_RTH; %Incorrect
-altvv1After = vdv1_MCI + vv1_MCI;
-
-dfpa = asind(sind(180-alpha1)/v1After) * deltaV1;
+dfpa = asind(sind(180-alpha1)/v1After * deltaV1);
 fpaAfter = fpa1 + dfpa;
 
-true_a_after = 0;
+%%
+fprintf('Problem 3:\n')
+fprintf('Velocity magnitude: %g',v1After)
+fprintf('Flight Path Angle: %g', fpaAfter)
 
 %% Problem 4
+
 % Wait until MAVEN reaches TA = 240 degrees in the new orbit before
 % implementing the final maneuver. What is the new position and velocity
 % (r2, v2) in the Mars equatorial inertial coordinate system (x - y - z)?
-syms a2Before p 
-a2Before = solve(-mu('Mars')/(2*a2Before) == v1After^2/2 - mu('Mars')/r1After, a2Before);
-p2Before = solve(sqrt(mu('Mars')*p) == r1After*v1After*cosd(fpaAfter),p);
-e2Before = sqrt(1 - p2Before/a2Before);
-ta2Before = 240; % --
+
+ta1After = atan2d(r1After*v1After^2/mu('Mars')*sind(fpaAfter)*cosd(fpaAfter), r1After*v1After^2/mu('Mars')*cosd(fpaAfter)^2-1);
+ta2Before = 240; % (deg) final true anomaly
+syms a2Before
+a2Before = double(solve(-mu('Mars')/(2*a2Before) == v1After^2/2 - mu('Mars')/r1After, a2Before));
+e2Before = double(sqrt((r1After*v1After^2/mu('Mars')-1)^2*cosd(fpaAfter)^2+sind(fpaAfter)^2));
+p2Before = (a2Before)*(1 - e2Before^2);
+h2Before = sqrt(mu('Mars')*p2Before);
 i2Before = incInit;
 raan2Before = raanInit;
 r2Before = p2Before/(1+e2Before*cosd(ta2Before));
-v2Before = 0;
-rHat2Before =  vr1_MCI/norm(vr1_MCI);
-hHat2Before = cross(vr1_MCI, vv1_MCI) / norm(cross(vr1_MCI, vv1_MCI));
+rHat2Before =  vr1_MCIBefore/norm(vr1_MCIBefore);
+hHat2Before = cross(vr1_MCIBefore, vv1_MCIBefore) / norm(cross(vr1_MCIBefore, vv1_MCIBefore));
 thetaHat2Before = cross(hHat2Before, rHat2Before);
-aol2Before = asind(rHat2Before(3)/sind(i2Before))
-aol2BeforeCheck = acosd(thetaHat2Before(3)/sind(i2Before)) % Choosing pos. value
+aol2Before = asind(rHat2Before(3)/sind(i2Before));
+aol2BeforeCheck = acosd(thetaHat2Before(3)/sind(i2Before)); % Choosing pos. value
 aol2Before = aol2BeforeCheck;
+deltaAOP1 = taInit - ta1After; % (deg) change in argument of periapsis of transfer
+aop2After = aopInit + deltaAOP1; % (deg) argument of periapsis of transfer
+aol2After = ta2Before + aop2After; % (deg) argument of latittude of transfer
+A2 = RTHtoMCI(raanInit, aol2After, incInit);
 B2 = EPHtoRTH(ta2Before);
+vv2_RTHBefore = [h2Before*e2Before/p2Before*sind(ta2Before) h2Before/r2Before 0]';
 vr2_RTHBefore = [r2Before; 0; 0];
-vr2_MCIBefore = double(A*vr2_RTHBefore);
-vv2_EPHBefore = sqrt(mu('Mars')/pInit)*[ -sind(ta2Before); e2Before + cosd(ta2Before); 0 ];
-vv2_RTHBefore = B2*vv2_EPHBefore;
-vv2_MCIBefore = double(A*vv2_RTHBefore);
+vr2_MCIBefore = double(A2*vr2_RTHBefore);
+vv2_MCIBefore = double(A2*vv2_RTHBefore);
 
-% raan2Before = asind(hHat2Before(1)/sind(i2Before));
-% raan2Before = [raan2Before 180-raan2Before]
-% raan2BeforeCheck = acosd(-hHat2Before(2)/sind(i2Before)); % Consistent with this value
-% raan2BeforeCheck = [raan2BeforeCheck -raan2BeforeCheck]
-% aol2Before = 0;
+%%
+fprintf('Problem 4:\n')
+fprintf('New Radius Vector: %g %g %g',vr2_MCIBefore)
+fprintf('New Velocity Vector: %g %g %g',vv2_MCIBefore)
 
 %% Problem 5
+
 % The next maneuver has |deltaV2| = 0.22 km/s, alpha2 = -20 degrees, and
 % beta2 = -50 degrees. Find deltaV2 in the Mars equitorial inertial
 % coordinate system
-
+syms a2After
 deltaV2 = 0.22; % --
 alpha2 = -20; % --
 beta2 = -50; % --
-vdeltaV2_VCN = deltaV2*[cosd(beta2)*cosd(alpha2); cosd(beta2)*sind(alpha2); sind(beta2)];
-vdeltaV2_MCI = A*vdeltaV2_VCN
+h2Before = norm(cross(vr2_MCIBefore, vv2_MCIBefore));
+fpa2Before = atan2d(r2Before*e2Before*sind(ta2Before), p2Before);
+phi = alpha2 + fpa2Before;
+vdeltaV2_RTH = deltaV2*[cosd(beta2)*sind(phi); cosd(beta2)*cosd(phi); sind(beta2)];
+vdeltaV2_MCI = A2*vdeltaV2_RTH;
+
+%%
+fprintf('Problem 5:\n')
+fprintf('DeltaV in MCI:',vdeltaV2_MCI)
 
 %% Problem 6
+
 % Determine the new velocity in the Mars equatorial inertial coordinate
 % system.
+vv2_MCIAfter = vv2_MCIBefore + vdeltaV2_MCI;
 
+fprintf('Pro
 
 %% Problem 7
+
 % How have the orbital elements changed from the initial orbit (values
 % given in the problem statement)? What do these changes mean for the new
 % orbit?
+syms aFinal eFinal
 
-%% Values for GMAT Check
-vdeltaV1_VCN = deltaV1*[cosd(alpha1); sind(alpha1); 0]; % km/s - Mars Centered Inertial deltaV
-vdeltaV2_VCN = deltaV2*[cosd(beta2)*cosd(alpha2); cosd(beta2)*sind(alpha2); sind(beta2)]; % km/s - Mars Centered Inertial deltaV
+rHatFinal = vr2_MCIBefore / norm(vr2_MCIBefore);
+hHatFinal = cross(vr2_MCIBefore,vv2_MCIAfter)/norm(cross(vr2_MCIBefore,vv2_MCIAfter));
+thetaHatFinal = cross(hHatFinal,rHatFinal);
+
+hFinal = norm(cross(vr2_MCIBefore,vv2_MCIAfter));
+aFinal = double(solve(-mu('Mars')/(2*aFinal) == norm(vv2_MCIAfter)^2/2 - mu('Mars')/norm(vr2_MCIBefore), aFinal));
+eFinal = max(double(solve(-mu('Mars')^2/(2*hFinal^2) * (1-eFinal^2) == -mu('Mars')/(2*aFinal), eFinal)));
+incFinal = acosd(hHatFinal(3)); % Choose positive value because 0 < i < 180
+raanFinal = acosd(-(hHatFinal(2)/sind(incFinal))); 
+raanFinalCheck = asind(hHatFinal(1)/sind(incFinal));
+raanFinal = raanFinalCheck; % Choose the negative value
+aopFinal = 0; % degrees --
+aolFinal = 203.9; % degrees --
 
 %% Function Definitions
+
 function outputMatrix = RTHtoMCI(raan, theta, i)
     outputMatrix = ...
         [ cosd(raan)*cosd(theta) - sind(raan)*cosd(i)*sind(theta) , ...
