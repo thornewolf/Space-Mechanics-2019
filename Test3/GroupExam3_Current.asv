@@ -1,6 +1,6 @@
 %% Group Exam 3
 clear; clc;
-% AE313 - Due: 4/10/19
+% AE313 Exam #3  - Due: 4/10/19
 % Grace Day, JiYoung Hwang, Aaron Scott, Thorne Wolfenbarger
 
 %% Preamble
@@ -39,8 +39,8 @@ v1 = norm(vv1_MCIBefore);
 fpa1 = atan2d(rInit*eInit*sind(taInit), pInit);
 %%
 fprintf('Problem 1:\n')
-fprintf('Initial Radius in Mars Centered Inertial (MCI): %g %g %g km \n',vr1_MCIBefore)
-fprintf('Initial Velocity in Mars Centered Inertial (MCI): %g %g %g km \n',vv1_MCIBefore)
+fprintf('Initial Radius in Mars Centered Inertial (MCI): %gx + %gy + %gz km \n',vr1_MCIBefore)
+fprintf('Initial Velocity in Mars Centered Inertial (MCI): %gx + %gy+ %gz km \n\n',vv1_MCIBefore)
 
 %% Problem 2
 
@@ -61,8 +61,8 @@ fpaAfter = fpa1 + dfpa;
 
 %%
 fprintf('Problem 3:\n')
-fprintf('Velocity magnitude: %g',v1After)
-fprintf('Flight Path Angle: %g', fpaAfter)
+fprintf('Velocity magnitude: %g km/s\n',v1After)
+fprintf('Flight Path Angle: %g degrees \n\n', fpaAfter)
 
 %% Problem 4
 
@@ -98,8 +98,8 @@ vv2_MCIBefore = double(A2*vv2_RTHBefore);
 
 %%
 fprintf('Problem 4:\n')
-fprintf('New Radius Vector: %g %g %g',vr2_MCIBefore)
-fprintf('New Velocity Vector: %g %g %g',vv2_MCIBefore)
+fprintf('New Radius Vector: %gx + %gy + %gz km \n',vr2_MCIBefore)
+fprintf('New Velocity Vector: %gx + %gy + %gz km/s \n\n',vv2_MCIBefore)
 
 %% Problem 5
 
@@ -118,7 +118,7 @@ vdeltaV2_MCI = A2*vdeltaV2_RTH;
 
 %%
 fprintf('Problem 5:\n')
-fprintf('DeltaV in MCI:',vdeltaV2_MCI)
+fprintf('deltaV Vector after Manuever 2 in MCI: %gx + %gy + %gz km/s \n\n', vdeltaV2_MCI)
 
 %% Problem 6
 
@@ -126,14 +126,17 @@ fprintf('DeltaV in MCI:',vdeltaV2_MCI)
 % system.
 vv2_MCIAfter = vv2_MCIBefore + vdeltaV2_MCI;
 
-fprintf('Pro
+
+%%
+fprintf('Problem 6:\n')
+fprintf('New Velocity in MCI: %gx + %gy + %gz km/s \n\n',vv2_MCIAfter);
 
 %% Problem 7
 
 % How have the orbital elements changed from the initial orbit (values
 % given in the problem statement)? What do these changes mean for the new
 % orbit?
-syms aFinal eFinal
+syms aFinal eFinal taFinal
 
 rHatFinal = vr2_MCIBefore / norm(vr2_MCIBefore);
 hHatFinal = cross(vr2_MCIBefore,vv2_MCIAfter)/norm(cross(vr2_MCIBefore,vv2_MCIAfter));
@@ -146,8 +149,39 @@ incFinal = acosd(hHatFinal(3)); % Choose positive value because 0 < i < 180
 raanFinal = acosd(-(hHatFinal(2)/sind(incFinal))); 
 raanFinalCheck = asind(hHatFinal(1)/sind(incFinal));
 raanFinal = raanFinalCheck; % Choose the negative value
-aopFinal = 0; % degrees --
-aolFinal = 203.9; % degrees --
+aolFinal = asind(rHatFinal(3)/sind(incFinal)); 
+aolFinalCheck = acosd(thetaHatFinal(3)/sind(incFinal));
+aolFinal = aolFinalCheck; % Choose the positive value
+pFinal = aFinal * (1 - eFinal^2);
+taFinal = -acosd(((pFinal/norm(vr2_MCIBefore)) - 1)/eFinal); % Choose negative because descending (alpha negative)
+aopFinal = aolFinal - taFinal;
+
+deltaSMA = aFinal - aInit;
+deltaECC = eFinal - eInit;
+deltaRAAN = 360 + (raanFinal - raanInit);
+deltaAOP = aopFinal - aopInit;
+deltaINC = incFinal - incInit;
+deltaAOL = aolFinal - aolInit;
+
+%%
+fprintf('Problem 7:\n')
+fprintf('Change in a: %f km \n', deltaSMA)
+fprintf('Change in e: %f \n', deltaECC)
+fprintf('Change in RAAN: %f degrees \n', deltaRAAN)
+fprintf('Change in AOP: %f degrees \n', deltaAOP)
+fprintf('Change in Inclination: %f degrees \n', deltaINC)
+%%
+% Increasing the semi-major axis scales the orbit away
+% from Mars such that the spacecraft is near apoapsis for a longer period
+% of time, allowing for more communication. The eccentricity is about the
+% same indicating a minimal change in the elognation of the orbit. The
+% change in the Right Ascention of the Ascending Node is very small. This
+% means that the orbit did not rotate significantly, implying the Ascending
+% Node and the Descending Node are in similar places in space. The Argument
+% of Periapsis rotates the orbit's closest approach about Mars. The change
+% in Inclination shows that the orbit is pulled further from the poles and
+% is more of an equatorial orbit.
+
 
 %% Function Definitions
 

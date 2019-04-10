@@ -66,8 +66,8 @@ table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px soli
 
 
 
-  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Group Exam 3</a></li><li><a href="#2">Preamble</a></li><li><a href="#3">Given</a></li><li><a href="#4">Problem 1</a></li><li><a href="#6">Problem 2</a></li><li><a href="#7">Problem 3</a></li><li><a href="#9">Problem 4</a></li><li><a href="#11">Problem 5</a></li><li><a href="#13">Problem 6</a></li><li><a href="#15">Problem 7</a></li><li><a href="#17">Function Definitions</a></li><li><a href="#18">End</a></li></ul></div><h2 id="1">Group Exam 3</h2><pre class="codeinput">clear; clc;
-<span class="comment">% AE313 - Due: 4/10/19</span>
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Group Exam 3</a></li><li><a href="#2">Preamble</a></li><li><a href="#3">Given</a></li><li><a href="#4">Problem 1</a></li><li><a href="#6">Problem 2</a></li><li><a href="#7">Problem 3</a></li><li><a href="#9">Problem 4</a></li><li><a href="#11">Problem 5</a></li><li><a href="#13">Problem 6</a></li><li><a href="#15">Problem 7</a></li><li><a href="#18">Function Definitions</a></li><li><a href="#19">End</a></li></ul></div><h2 id="1">Group Exam 3</h2><pre class="codeinput">clear; clc;
+<span class="comment">% AE313 Exam #3  - Due: 4/10/19</span>
 <span class="comment">% Grace Day, JiYoung Hwang, Aaron Scott, Thorne Wolfenbarger</span>
 </pre><h2 id="2">Preamble</h2><pre class="codeinput">bodies = { <span class="string">'Earth'</span>, <span class="string">'Mars'</span>, <span class="string">'Sun'</span> };
 gravParams = [ 398600, 42828, 132712440000 ];
@@ -98,11 +98,12 @@ vv1_MCIBefore = A*vv1_RTHBefore;
 v1 = norm(vv1_MCIBefore);
 fpa1 = atan2d(rInit*eInit*sind(taInit), pInit);
 </pre><pre class="codeinput">fprintf(<span class="string">'Problem 1:\n'</span>)
-fprintf(<span class="string">'Initial Radius in Mars Centered Inertial (MCI): %g %g %g km \n'</span>,vr1_MCIBefore)
-fprintf(<span class="string">'Initial Velocity in Mars Centered Inertial (MCI): %g %g %g km \n'</span>,vv1_MCIBefore)
+fprintf(<span class="string">'Initial Radius in Mars Centered Inertial (MCI): %gx + %gy + %gz km \n'</span>,vr1_MCIBefore)
+fprintf(<span class="string">'Initial Velocity in Mars Centered Inertial (MCI): %gx + %gy+ %gz km \n\n'</span>,vv1_MCIBefore)
 </pre><pre class="codeoutput">Problem 1:
-Initial Radius in Mars Centered Inertial (MCI): -4089.79 2521.97 -2040.66 km 
-Initial Velocity in Mars Centered Inertial (MCI): 1.34759 -1.76112 -2.00867 km 
+Initial Radius in Mars Centered Inertial (MCI): -4089.79x + 2521.97y + -2040.66z km 
+Initial Velocity in Mars Centered Inertial (MCI): 1.34759x + -1.76112y+ -2.00867z km 
+
 </pre><h2 id="6">Problem 2</h2><pre class="codeinput"><span class="comment">% The first burn is an in-plane burn with |deltaV1| = 0.14 km/s and alpha1</span>
 <span class="comment">% = 45 degrees. Draw the vector diagram.</span>
 
@@ -115,11 +116,12 @@ v1After = sqrt(deltaV1^2 + v1^2 - 2*deltaV1*v1*cosd(180-alpha1));
 dfpa = asind(sind(180-alpha1)/v1After * deltaV1);
 fpaAfter = fpa1 + dfpa;
 </pre><pre class="codeinput">fprintf(<span class="string">'Problem 3:\n'</span>)
-fprintf(<span class="string">'Velocity magnitude: %g \n'</span>,v1After)
-fprintf(<span class="string">'Flight Path Angle: %g \n'</span>, fpaAfter)
+fprintf(<span class="string">'Velocity magnitude: %g km/s\n'</span>,v1After)
+fprintf(<span class="string">'Flight Path Angle: %g degrees \n\n'</span>, fpaAfter)
 </pre><pre class="codeoutput">Problem 3:
-Velocity magnitude: 3.09262 
-Flight Path Angle: -20.1766 
+Velocity magnitude: 3.09262 km/s
+Flight Path Angle: -20.1766 degrees 
+
 </pre><h2 id="9">Problem 4</h2><pre class="codeinput"><span class="comment">% Wait until MAVEN reaches TA = 240 degrees in the new orbit before</span>
 <span class="comment">% implementing the final maneuver. What is the new position and velocity</span>
 <span class="comment">% (r2, v2) in the Mars equatorial inertial coordinate system (x - y - z)?</span>
@@ -150,11 +152,12 @@ vr2_RTHBefore = [r2Before; 0; 0];
 vr2_MCIBefore = double(A2*vr2_RTHBefore);
 vv2_MCIBefore = double(A2*vv2_RTHBefore);
 </pre><pre class="codeinput">fprintf(<span class="string">'Problem 4:\n'</span>)
-fprintf(<span class="string">'New Radius Vector: %g %g %g \n'</span>,vr2_MCIBefore)
-fprintf(<span class="string">'New Velocity Vector: %g %g %g \n'</span>,vv2_MCIBefore)
+fprintf(<span class="string">'New Radius Vector: %gx + %gy + %gz km \n'</span>,vr2_MCIBefore)
+fprintf(<span class="string">'New Velocity Vector: %gx + %gy + %gz km/s \n\n'</span>,vv2_MCIBefore)
 </pre><pre class="codeoutput">Problem 4:
-New Radius Vector: -4916.68 4275.15 1130.48 
-New Velocity Vector: 0.00279181 -0.812068 -2.33442 
+New Radius Vector: -4916.68x + 4275.15y + 1130.48z km 
+New Velocity Vector: 0.00279181x + -0.812068y + -2.33442z km/s 
+
 </pre><h2 id="11">Problem 5</h2><pre class="codeinput"><span class="comment">% The next maneuver has |deltaV2| = 0.22 km/s, alpha2 = -20 degrees, and</span>
 <span class="comment">% beta2 = -50 degrees. Find deltaV2 in the Mars equitorial inertial</span>
 <span class="comment">% coordinate system</span>
@@ -168,22 +171,22 @@ phi = alpha2 + fpa2Before;
 vdeltaV2_RTH = deltaV2*[cosd(beta2)*sind(phi); cosd(beta2)*cosd(phi); sind(beta2)];
 vdeltaV2_MCI = A2*vdeltaV2_RTH;
 </pre><pre class="codeinput">fprintf(<span class="string">'Problem 5:\n'</span>)
-fprintf(<span class="string">'DeltaV in MCI: \n'</span>,vdeltaV2_MCI)
+fprintf(<span class="string">'deltaV Vector after Manuever 2 in MCI: %gx + %gy + %gz km/s \n\n'</span>, vdeltaV2_MCI)
 </pre><pre class="codeoutput">Problem 5:
-DeltaV in MCI: 
+deltaV Vector after Manuever 2 in MCI: 0.139698x + 0.0566497y + -0.160235z km/s 
+
 </pre><h2 id="13">Problem 6</h2><pre class="codeinput"><span class="comment">% Determine the new velocity in the Mars equatorial inertial coordinate</span>
 <span class="comment">% system.</span>
 vv2_MCIAfter = vv2_MCIBefore + vdeltaV2_MCI;
 </pre><pre class="codeinput">fprintf(<span class="string">'Problem 6:\n'</span>)
-fprintf(<span class="string">'New Velocity MCI: %g \n'</span>,vv2_MCIAfter)
+fprintf(<span class="string">'New Velocity in MCI: %gx + %gy + %gz km/s \n\n'</span>,vv2_MCIAfter);
 </pre><pre class="codeoutput">Problem 6:
-New Velocity MCI: 0.14249 
-New Velocity MCI: -0.755419 
-New Velocity MCI: -2.49466 
+New Velocity in MCI: 0.14249x + -0.755419y + -2.49466z km/s 
+
 </pre><h2 id="15">Problem 7</h2><pre class="codeinput"><span class="comment">% How have the orbital elements changed from the initial orbit (values</span>
 <span class="comment">% given in the problem statement)? What do these changes mean for the new</span>
 <span class="comment">% orbit?</span>
-syms <span class="string">aFinal</span> <span class="string">eFinal</span>
+syms <span class="string">aFinal</span> <span class="string">eFinal</span> <span class="string">taFinal</span>
 
 rHatFinal = vr2_MCIBefore / norm(vr2_MCIBefore);
 hHatFinal = cross(vr2_MCIBefore,vv2_MCIAfter)/norm(cross(vr2_MCIBefore,vv2_MCIAfter));
@@ -196,9 +199,32 @@ incFinal = acosd(hHatFinal(3)); <span class="comment">% Choose positive value be
 raanFinal = acosd(-(hHatFinal(2)/sind(incFinal)));
 raanFinalCheck = asind(hHatFinal(1)/sind(incFinal));
 raanFinal = raanFinalCheck; <span class="comment">% Choose the negative value</span>
-aopFinal = 0; <span class="comment">% degrees --</span>
-aolFinal = 203.9; <span class="comment">% degrees --</span>
-</pre><h2 id="17">Function Definitions</h2><pre class="codeinput"><span class="keyword">function</span> outputMatrix = RTHtoMCI(raan, theta, i)
+aolFinal = asind(rHatFinal(3)/sind(incFinal));
+aolFinalCheck = acosd(thetaHatFinal(3)/sind(incFinal));
+aolFinal = aolFinalCheck; <span class="comment">% Choose the positive value</span>
+pFinal = aFinal * (1 - eFinal^2);
+taFinal = -acosd(((pFinal/norm(vr2_MCIBefore)) - 1)/eFinal); <span class="comment">% Choose negative because descending (alpha negative)</span>
+aopFinal = aolFinal - taFinal;
+
+deltaSMA = aFinal - aInit;
+deltaECC = eFinal - eInit;
+deltaRAAN = 360 + (raanFinal - raanInit);
+deltaAOP = aopFinal - aopInit;
+deltaINC = incFinal - incInit;
+deltaAOL = aolFinal - aolInit;
+</pre><pre class="codeinput">fprintf(<span class="string">'Problem 7:\n'</span>)
+fprintf(<span class="string">'Change in a: %f km \n'</span>, deltaSMA)
+fprintf(<span class="string">'Change in e: %f \n'</span>, deltaECC)
+fprintf(<span class="string">'Change in RAAN: %f degrees \n'</span>, deltaRAAN)
+fprintf(<span class="string">'Change in AOP: %f degrees \n'</span>, deltaAOP)
+fprintf(<span class="string">'Change in Inclination: %f degrees \n'</span>, deltaINC)
+</pre><pre class="codeoutput">Problem 7:
+Change in a: 1232.554271 km 
+Change in e: 0.009780 
+Change in RAAN: -0.726109 degrees 
+Change in AOP: -27.216117 degrees 
+Change in Inclination: 3.959826 degrees 
+</pre><p>Increasing the semi-major axis scales the orbit away from Mars such that the spacecraft is near apoapsis for a longer period of time, allowing for more communication. The eccentricity is about the same indicating a minimal change in the elognation of the orbit. The change in the Right Ascention of the Ascending Node is very small. This means that the orbit did not rotate significantly, implying the Ascending Node and the Descending Node are in similar places in space. The Argument of Periapsis rotates the orbit's closest approach about Mars. The change in Inclination shows that the orbit is pulled further from the poles and is more of an equatorial orbit.</p><h2 id="18">Function Definitions</h2><pre class="codeinput"><span class="keyword">function</span> outputMatrix = RTHtoMCI(raan, theta, i)
     outputMatrix = <span class="keyword">...</span>
         [ cosd(raan)*cosd(theta) - sind(raan)*cosd(i)*sind(theta) , <span class="keyword">...</span>
          -cosd(raan)*sind(theta) - sind(raan)*cosd(i)*cosd(theta) , <span class="keyword">...</span>
@@ -218,11 +244,11 @@ aolFinal = 203.9; <span class="comment">% degrees --</span>
                  0,        0, 1; <span class="keyword">...</span>
         ];
 <span class="keyword">end</span>
-</pre><h2 id="18">End</h2><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
+</pre><h2 id="19">End</h2><p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2018b</a><br></p></div><!--
 ##### SOURCE BEGIN #####
 %% Group Exam 3
 clear; clc;
-% AE313 - Due: 4/10/19
+% AE313 Exam #3  - Due: 4/10/19
 % Grace Day, JiYoung Hwang, Aaron Scott, Thorne Wolfenbarger
 
 %% Preamble
@@ -261,8 +287,8 @@ v1 = norm(vv1_MCIBefore);
 fpa1 = atan2d(rInit*eInit*sind(taInit), pInit);
 %%
 fprintf('Problem 1:\n')
-fprintf('Initial Radius in Mars Centered Inertial (MCI): %g %g %g km \n',vr1_MCIBefore)
-fprintf('Initial Velocity in Mars Centered Inertial (MCI): %g %g %g km \n',vv1_MCIBefore)
+fprintf('Initial Radius in Mars Centered Inertial (MCI): %gx + %gy + %gz km \n',vr1_MCIBefore)
+fprintf('Initial Velocity in Mars Centered Inertial (MCI): %gx + %gy+ %gz km \n\n',vv1_MCIBefore)
 
 %% Problem 2
 
@@ -283,8 +309,8 @@ fpaAfter = fpa1 + dfpa;
 
 %%
 fprintf('Problem 3:\n')
-fprintf('Velocity magnitude: %g \n',v1After)
-fprintf('Flight Path Angle: %g \n', fpaAfter)
+fprintf('Velocity magnitude: %g km/s\n',v1After)
+fprintf('Flight Path Angle: %g degrees \n\n', fpaAfter)
 
 %% Problem 4
 
@@ -320,8 +346,8 @@ vv2_MCIBefore = double(A2*vv2_RTHBefore);
 
 %%
 fprintf('Problem 4:\n')
-fprintf('New Radius Vector: %g %g %g \n',vr2_MCIBefore)
-fprintf('New Velocity Vector: %g %g %g \n',vv2_MCIBefore)
+fprintf('New Radius Vector: %gx + %gy + %gz km \n',vr2_MCIBefore)
+fprintf('New Velocity Vector: %gx + %gy + %gz km/s \n\n',vv2_MCIBefore)
 
 %% Problem 5
 
@@ -340,7 +366,7 @@ vdeltaV2_MCI = A2*vdeltaV2_RTH;
 
 %%
 fprintf('Problem 5:\n')
-fprintf('DeltaV in MCI: \n',vdeltaV2_MCI)
+fprintf('deltaV Vector after Manuever 2 in MCI: %gx + %gy + %gz km/s \n\n', vdeltaV2_MCI)
 
 %% Problem 6
 
@@ -351,14 +377,14 @@ vv2_MCIAfter = vv2_MCIBefore + vdeltaV2_MCI;
 
 %%
 fprintf('Problem 6:\n')
-fprintf('New Velocity MCI: %g \n',vv2_MCIAfter)
+fprintf('New Velocity in MCI: %gx + %gy + %gz km/s \n\n',vv2_MCIAfter);
 
 %% Problem 7
 
 % How have the orbital elements changed from the initial orbit (values
 % given in the problem statement)? What do these changes mean for the new
 % orbit?
-syms aFinal eFinal
+syms aFinal eFinal taFinal
 
 rHatFinal = vr2_MCIBefore / norm(vr2_MCIBefore);
 hHatFinal = cross(vr2_MCIBefore,vv2_MCIAfter)/norm(cross(vr2_MCIBefore,vv2_MCIAfter));
@@ -371,10 +397,39 @@ incFinal = acosd(hHatFinal(3)); % Choose positive value because 0 < i < 180
 raanFinal = acosd(-(hHatFinal(2)/sind(incFinal))); 
 raanFinalCheck = asind(hHatFinal(1)/sind(incFinal));
 raanFinal = raanFinalCheck; % Choose the negative value
-aopFinal = 0; % degrees REPLACE_WITH_DASH_DASH
-aolFinal = 203.9; % degrees REPLACE_WITH_DASH_DASH
+aolFinal = asind(rHatFinal(3)/sind(incFinal)); 
+aolFinalCheck = acosd(thetaHatFinal(3)/sind(incFinal));
+aolFinal = aolFinalCheck; % Choose the positive value
+pFinal = aFinal * (1 - eFinal^2);
+taFinal = -acosd(((pFinal/norm(vr2_MCIBefore)) - 1)/eFinal); % Choose negative because descending (alpha negative)
+aopFinal = aolFinal - taFinal;
+
+deltaSMA = aFinal - aInit;
+deltaECC = eFinal - eInit;
+deltaRAAN = 360 + (raanFinal - raanInit);
+deltaAOP = aopFinal - aopInit;
+deltaINC = incFinal - incInit;
+deltaAOL = aolFinal - aolInit;
 
 %%
+fprintf('Problem 7:\n')
+fprintf('Change in a: %f km \n', deltaSMA)
+fprintf('Change in e: %f \n', deltaECC)
+fprintf('Change in RAAN: %f degrees \n', deltaRAAN)
+fprintf('Change in AOP: %f degrees \n', deltaAOP)
+fprintf('Change in Inclination: %f degrees \n', deltaINC)
+%%
+% Increasing the semi-major axis scales the orbit away
+% from Mars such that the spacecraft is near apoapsis for a longer period
+% of time, allowing for more communication. The eccentricity is about the
+% same indicating a minimal change in the elognation of the orbit. The
+% change in the Right Ascention of the Ascending Node is very small. This
+% means that the orbit did not rotate significantly, implying the Ascending
+% Node and the Descending Node are in similar places in space. The Argument
+% of Periapsis rotates the orbit's closest approach about Mars. The change
+% in Inclination shows that the orbit is pulled further from the poles and
+% is more of an equatorial orbit.
+
 
 %% Function Definitions
 
