@@ -11,12 +11,12 @@ GMAT MAVEN.DateFormat = UTCGregorian;
 GMAT MAVEN.Epoch = '08 Apr 2019 12:00:00.000';
 GMAT MAVEN.CoordinateSystem = MarsMJ2000Eq;
 GMAT MAVEN.DisplayStateType = Keplerian;
-GMAT MAVEN.SMA = 5744.000000020193;
-GMAT MAVEN.ECC = 0.3842000000015624;
-GMAT MAVEN.INC = 74.77000000001833;
+GMAT MAVEN.SMA = 5744.000000020184;
+GMAT MAVEN.ECC = 0.3842000000015617;
+GMAT MAVEN.INC = 74.77000000001837;
 GMAT MAVEN.RAAN = 321.6999999998616;
-GMAT MAVEN.AOP = 303.1999999999792;
-GMAT MAVEN.TA = 260.6999999999637;
+GMAT MAVEN.AOP = 303.1999999999794;
+GMAT MAVEN.TA = 260.6999999999636;
 GMAT MAVEN.DryMass = 850;
 GMAT MAVEN.Cd = 2.2;
 GMAT MAVEN.Cr = 1.8;
@@ -44,7 +44,6 @@ GMAT MAVEN.AttitudeDisplayStateType = 'Quaternion';
 GMAT MAVEN.AttitudeRateDisplayStateType = 'AngularVelocity';
 GMAT MAVEN.AttitudeCoordinateSystem = EarthMJ2000Eq;
 GMAT MAVEN.EulerAngleSequence = '321';
-
 
 
 
@@ -115,9 +114,9 @@ GMAT MarsMJ2000Eq.Axes = MJ2000Eq;
 
 Create OrbitView marsView;
 GMAT marsView.SolverIterations = Current;
-GMAT marsView.UpperLeft = [ -0.001111111111111111 -0.004939626783754116 ];
-GMAT marsView.Size = [ 1.211111111111111 0.8594950603732162 ];
-GMAT marsView.RelativeZOrder = 128;
+GMAT marsView.UpperLeft = [ 0.005294117647058823 0 ];
+GMAT marsView.Size = [ 1.142352941176471 0.85995085995086 ];
+GMAT marsView.RelativeZOrder = 32;
 GMAT marsView.Maximized = false;
 GMAT marsView.Add = {MAVEN, Mars};
 GMAT marsView.CoordinateSystem = MarsMJ2000Eq;
@@ -147,9 +146,9 @@ GMAT marsView.EnableConstellations = On;
 
 Create ReportFile reportFile;
 GMAT reportFile.SolverIterations = Current;
-GMAT reportFile.UpperLeft = [ 0.01703703703703704 0.01866081229418222 ];
-GMAT reportFile.Size = [ 0.9133333333333333 0.783205268935236 ];
-GMAT reportFile.RelativeZOrder = 124;
+GMAT reportFile.UpperLeft = [ 0.04705882352941176 0.1240786240786241 ];
+GMAT reportFile.Size = [ 0.9152941176470588 0.7862407862407862 ];
+GMAT reportFile.RelativeZOrder = 30;
 GMAT reportFile.Maximized = false;
 GMAT reportFile.Filename = 'DefaultReportFile.txt';
 GMAT reportFile.Precision = 16;
@@ -170,7 +169,7 @@ GMAT reportFile.WriteReport = true;
 BeginMissionSequence;
 Report 'getValues_Prob1' reportFile MAVEN.MarsMJ2000Eq.X MAVEN.MarsMJ2000Eq.Y MAVEN.MarsMJ2000Eq.Z MAVEN.MarsMJ2000Eq.VX MAVEN.MarsMJ2000Eq.VY MAVEN.MarsMJ2000Eq.VZ MAVEN.MarsMJ2000Eq.FPA MAVEN.Mars.SMA MAVEN.Mars.ECC MAVEN.MarsMJ2000Eq.RAAN MAVEN.MarsMJ2000Eq.AOP MAVEN.MarsMJ2000Eq.INC;
 Maneuver 'doManeuver_Prob2' impulseBurn_Prob2(MAVEN);
-Report 'getValues_Prob3' reportFile MAVEN.MarsMJ2000Eq.VMAG MAVEN.MarsMJ2000Eq.FPA MAVEN.MarsMJ2000Eq.VX MAVEN.MarsMJ2000Eq.VY MAVEN.MarsMJ2000Eq.VZ;
+Report 'getValues_Prob3' reportFile MAVEN.MarsMJ2000Eq.VMAG MAVEN.MarsMJ2000Eq.FPA;
 Propagate 'wait_Prob4' marsPropagator(MAVEN) {MAVEN.Mars.TA = 240};
 Report 'getValues_Prob4' reportFile MAVEN.MarsMJ2000Eq.X MAVEN.MarsMJ2000Eq.Y MAVEN.MarsMJ2000Eq.Z MAVEN.MarsMJ2000Eq.VX MAVEN.MarsMJ2000Eq.VY MAVEN.MarsMJ2000Eq.VZ MAVEN.MarsMJ2000Eq.RAAN;
 Maneuver 'doManeuver_Prob5' impulseBurn_Prob5(MAVEN);
