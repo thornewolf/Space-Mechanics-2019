@@ -1,0 +1,109 @@
+clc; clear; close all
+% Constants
+planets = {'Sun', 'Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptine', 'Pluto'};
+rad_list = [695990.0, 1739.2, 2439.7, 6051.9, 6378.0, 3397.0, 71492.0, 60268.0, 25559.0, 25269.0, 1162.0];
+mu_list = [132712440000.0, 4902.8, 22032.0, 324860.0, 398600.0, 42828.0, 126713000.0, 37941000.0, 5794500.0, 6836500.0, 981.6];
+sma_list = [0.0, 384400.0, 57910000.0, 108210000.0, 149600000.0, 227920000.0, 778570000.0, 1433530000.0, 2872460000.0, 4495060000.0, 5906380000.0];
+R = containers.Map(planets,rad_list);
+MU = containers.Map(planets,mu_list);
+r = containers.Map(planets,sma_list);
+%%%%%%%
+
+STEPSIZE = 1;
+
+ta_range = [-61.2170  110.0000];
+step_count = (ta_range(2) - ta_range(1))/STEPSIZE;
+% 1. 
+ta_list = linspace(ta_range(1)+0.01, ta_range(2), step_count);
+r1 = R('Earth')*1.7;
+r2 = R('Earth') + 20460;
+c = 35828.32;
+TA = 140;
+emin = (r2 - r1)/c;
+xi = atan2d( (r1/r2 - cosd(TA)),sind(TA) );
+
+et  = emin ./ sind(ta_list + xi);
+
+pt = r1 .* (1 + et.*cosd(ta_list));
+
+at = pt ./ (1 - et.^2);
+
+% conditions on transfer arc at departure
+r1p = r1;
+v1p = sqrt(2*MU('Earth')/r1p - MU('Earth')./at);
+
+FPA1p = atan2d(r1p .* et .* sind(ta_list), pt);
+
+% find dv and alpha1p
+vc = sqrt(MU('Earth') / r1);
+v1m = vc;
+dv1 = sqrt( v1m^2 + v1p.^2 - 2*v1m.*v1p.*cosd(FPA1p) );
+
+nu = acosd( (v1p.^2 - v1m.^2 - dv1.^2)./(-2.*v1m.*dv1) );
+
+alpha = 180 - nu;
+
+% find conditions at arrival (v2m r2m FPA2m)
+r2m = r2;
+v2m = sqrt(2*MU('Earth')/r2m - MU('Earth')./at);
+
+ta2m = ta_list + TA;
+FPA2p = atan2d(r2m * et .* sind(ta2m), pt);
+
+vc = sqrt(MU('Earth')/r2);
+v2p = vc;
+
+dv2 = sqrt( v2m.^2 + v2p.^2 - 2.*v2m.*v2p.*cosd(FPA2p) );
+
+nu = acosd( (v2p.^2 - v2m.^2 - dv2.^2)./(-2.*v2m.*dv2) );
+
+alpha = 180 - nu;
+
+dvt = dv1 + dv2;
+
+figure(1)
+hold on
+% plot(ta_list, dvt)
+plot(ta_list, FPA1p, 'DisplayName', '\gamma_1')
+plot(ta_list, FPA2p, 'DisplayName', '\gamma_2')
+
+[mindv ind] = min(dvt);
+plot(ta_list(ind), FPA1p(ind), 'r.', 'HandleVisibility','off')
+plot(ta_list(ind), FPA2p(ind), 'r.', 'DisplayName', 'Minimum \Delta v')
+
+xlabel('$\theta^*$ (deg)','Interpreter','latex')
+ylabel('$|\Delta \vec{v}|~/~\gamma_1~/~\gamma_2$','Interpreter','latex')
+legend
+
+% 4. what type of transfer
+figure(2)
+ta_min_dep = ta_list(ind);
+ta_min_arr = ta2m(ind);
+et_min = et(ind);
+at_min = at(ind);
+t = linspace(ta_min_dep-10, ta_min_arr-10, 100);
+major = at_min;
+minor = at_min*sqrt(1-et_min^2);
+x = major*cosd(t);
+y = minor*sind(t);
+focus = sqrt(major^2 - minor^2);
+x = x-focus;
+hold on
+plot(x,y, 'linestyle', '--', 'label', 'Transfer Orbit');
+% plot([0 major*cosd(ta_min_dep)-focus], [0 minor*sind(ta_min_dep)], 'color', 'red');
+% plot([0 major*cosd(ta_min_arr)-focus], [0 minor*sind(ta_min_arr)], 'color', 'red');
+energy_min = MU('Earth')/at(ind);
+%Transfer type is a 1A transfer. Ellipse with TA < 180 & focus not between
+%chord and arc
+t = linspace(0, 2*pi, 100);
+x = r1*cos(t);
+y = r1*sin(t);
+plot(x,y)
+
+x = r2*cos(t);
+y = r2*sin(t);
+plot(x,y)
+axis equal
+title('Initial, Final, and Transfer Orbits')
+set(gca,'XTick',[], 'YTick', [])
+legend

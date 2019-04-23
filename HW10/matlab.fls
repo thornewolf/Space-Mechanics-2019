@@ -1,0 +1,6 @@
+PWD /Users/thornewolfenbarger/Google Drive/School/Sophomore/Semester 2/Space Mech/HW10
+INPUT /usr/local/texlive/2018/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT matlab.tex
+OUTPUT matlab.log

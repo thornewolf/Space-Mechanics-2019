@@ -1,0 +1,107 @@
+\documentclass[hidelinks,12pt]{article}
+
+\usepackage{amsmath}    % need for subequations
+\usepackage{graphicx}   % need for figures
+\usepackage{verbatim}   % useful for program listings
+\usepackage{color}      % use if color is used in text
+\usepackage{subfigure}  % use for side-by-side figures
+\usepackage{hyperref}   % use for hypertext links, including those to external documents and URLs
+
+\usepackage[numbered]{matlab-prettifier} % including matlab w/ syntax highlighting
+\usepackage[T1]{fontenc} % prettier matlab font
+\lstMakeShortInline[style=Matlab-editor]| % matlab inline escape character
+
+\usepackage[
+top    = 2.75cm,
+bottom = 2.50cm,
+left   = 3.00cm,
+right  = 2.50cm]{geometry}
+
+\graphicspath{ {./Figures/} }
+
+% don't need the following. simply use defaults
+\setlength{\baselineskip}{16.0pt}    % 16 pt usual spacing between lines
+
+
+
+\begin{document}
+\pagenumbering{gobble}
+\include{title}
+\pagenumbering{arabic}
+\begin{center}
+\large AE 313 Homework 10
+\end{center}
+\flushleft
+1. Draw the Jupiter-centered vector diagram of the fly-by.\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.1]{1}
+  \caption{Fly-by diagram}
+  \label{fig:Fig01}
+\end{figure}
+\vspace{10px}
+2. Find $\theta^{^*-}$\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+ta_clipper1m = atan2d( r_clipper1*v_clipper1m^2/MU('Jupiter') * cosd(FPA_clipper1m)*sind(FPA_clipper1m),...
+    r_clipper1*v_clipper1m^2/MU('Jupiter') * cosd(FPA_clipper1m) - 1);
+\end{lstlisting}
+$\theta^{^*-}=10^\circ$\\
+\vspace{10px}
+\newpage
+3. Determine the following: $r_{p/europa}, \alpha$\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+periapsis_europa = a_europa*(1-e_europa);
+...
+alpha = -alpha;
+\end{lstlisting}
+\begin{tabular}{ll}
+$r_{p/europa}=$&$6.6490 \cdot 10^5~km$\\
+$r_{p/europa \rightarrow clipper}=$&$1.3594 \cdot 10^3~km$\\
+$\alpha=$&$-116.1968^\circ$\\
+\end{tabular}\\
+\vspace{10px}
+4. Does the spacecraft gain or lose energy? Why?\\
+Geometrically, the spacecraft must lose energy. Observing `delta` it can be determined that the spacecraft must have lost energy since `delta` directs the dv vector opposing the initial velocity\\
+\vspace{10px}
+5. Does the spacecraft pass "ahead" or "behind"? Prove it with drawings. (Hint: Draw behind pass vs. ahead pass. How does $v_{inf}$ change?)\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.1]{5}
+  \caption{Infinite Diagram}
+  \label{fig:Fig02}
+\end{figure}
+\vspace{10px}
+6. Determine the characteristics of the new Jupiter orbit:\\
+\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
+r_clipper2 = r_clipper1;
+...
+dAOP = ta_clipper2 - ta_clipper1m;
+\end{lstlisting}
+\begin{tabular}{lclc}
+$r^+=$&$6.6490 \cdot 10^5~km$&$v^+=$&$16.8374~km/s$\\
+$\gamma^+=$&$-7.8811^\circ$&$\theta^{^*+}=$&$-23.1067^\circ$\\
+$a^+=$&$1.2976 \cdot 10^6~km$&$e^+$&$0.5021$\\
+$\Delta \omega=$&$-10.7848^\circ$
+\end{tabular}\\
+\vspace{10px}
+7. In GMAT, plot the new and old Clipper orbits and the orbit of Europa. Draw the orbit properties.\\
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.2]{diagram}
+  \caption{GMAT with orbital properties}
+  \label{fig:Fig1}
+\end{figure}
+\begin{figure}[!htb]
+  \center
+  \includegraphics[scale=0.5]{detail}
+  \caption{Detailed View}
+  \label{fig:Fig2}
+\end{figure}
+
+\vspace{10px}
+\newpage
+8. Clipper's mission could involve over 45 fly-bys of Europa. If the goal is to return to Europa, would you have the spacecraft perform the fly by?\\
+I would not have the spacecraft perform this fly-by. The radius of clipper at periapsis around Europa is 1359km while the radius of Europa is 1561km. This is an impact trajectory. Another path would need to be chosen to avoid clipper impact with Europa.
+\newpage
+\input{matlab}
+\end{document}
