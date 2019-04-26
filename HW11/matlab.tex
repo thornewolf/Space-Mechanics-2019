@@ -1,6 +1,6 @@
 HW9.m
 \begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
-clc; clear;
+clc; clear; close all
 % Constants
 planets = {'Sun', 'Moon', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptine', 'Pluto'};
 rad_list = [695990.0, 1739.2, 2439.7, 6051.9, 6378.0, 3397.0, 71492.0, 60268.0, 25559.0, 25269.0, 1162.0];
@@ -11,81 +11,111 @@ MU = containers.Map(planets,mu_list);
 r = containers.Map(planets,sma_list);
 %%%%%%%
 
-MU_europa = 3202.7;
-a_europa = 671200;
-R_europa = 1561.0;
-e_europa = 0.00938;
+STEPSIZE = 0.0001;
 
-a_clipper = 21.6*R('Jupiter');
-e_clipper = 0.5731;
+ta_range = [-61.2170  110.0000];
+step_count = (ta_range(2) - ta_range(1))/STEPSIZE;
+% 1.
+ta_list = linspace(ta_range(1)+0.01, ta_range(2), step_count);
+r1 = R('Earth')*1.7;
+r2 = R('Earth') + 20460;
+c = 35828.32;
+TA = 140;
+emin = (r2 - r1)/c;
+xi = atan2d( (r1/r2 - cosd(TA)),sind(TA) );
 
-% Europa conditions
-r_europa = 664904.144;
-v_europa = sqrt(2*MU('Jupiter')/r_europa - MU('Jupiter')/a_europa);
-FPA_europa = 0; %periapsis
+et  = emin ./ sind(ta_list + xi);
 
+pt = r1 .* (1 + et.*cosd(ta_list));
 
-% 2. Find ta_clipper1m
-periapsis_europa = a_europa*(1-e_europa);
-r_clipper1 = periapsis_europa;
+at = pt ./ (1 - et.^2);
 
-v_clipper1m = 17.294;
-FPA_clipper1m = -4.5205; %deg | from worksheet 4-3-19
+% conditions on transfer arc at departure
+r1p = r1;
+v1p = sqrt(2*MU('Earth')/r1p - MU('Earth')./at);
 
-ta_clipper1m = atan2d( r_clipper1*v_clipper1m^2/MU('Jupiter') * cosd(FPA_clipper1m)*sind(FPA_clipper1m),...
-    r_clipper1*v_clipper1m^2/MU('Jupiter') * cosd(FPA_clipper1m) - 1);
+FPA1p = atan2d(r1p .* et .* sind(ta_list), pt);
 
-% 3. determine periapsis_clipper_europa, alpha1
-delta = 17.4; % deg | from worksheet 4-3-19
+% find dv and alpha1p
+vc = sqrt(MU('Earth') / r1);
+v1m = vc;
+dv1 = sqrt( v1m^2 + v1p.^2 - 2*v1m.*v1p.*cosd(FPA1p) );
 
-% inf vel rel to europa
-v_inf = sqrt(v_europa^2 + v_clipper1m^2 - 2*v_europa*v_clipper1m*cosd(FPA_clipper1m));
-a_clipper_europa1m = -MU_europa/v_inf^2;
-e_clipper_europa1m = 1/sind(delta/2);
-periapsis_clipper_europa1m = a_clipper_europa1m * (1-e_clipper_europa1m);
+nu = acosd( (v1p.^2 - v1m.^2 - dv1.^2)./(-2.*v1m.*dv1) );
 
-dv = 1.1; % km/s | from problem statement
-nu = acosd( dv/(2*v_inf) ); % positive by inspection
-offset_angle = acosd( (v_europa^2 - v_inf^2 - v_clipper1m^2)/(-2*v_inf*v_clipper1m) ); % positive by inspection
-alpha = 180 - nu + offset_angle;
-if alpha > 0
-    alpha = -alpha; %we are told alpha is negative
-end
+alpha = 180 - nu;
 
-% 4. Does the spacecraft lose energy?
-% Geometrically, the spacecraft must lose energy. Observing `delta` it can
-% be determined that the spacecraft must have lost energy since `delta`
-% directs the dv vector opposing the initial velocity
+% find conditions at arrival (v2m r2m FPA2m)
+r2m = r2;
+v2m = sqrt(2*MU('Earth')/r2m - MU('Earth')./at);
 
-% 5. Ahead or behind
-% Observing the same diagram from problem one we can see that the v_inf
-% after the gravity assist is directed more towards jupiter. This implies
-% that it is an ahead pass. It is not necessary to draw a diagram in the
-% europa centered view because all information is included in the jupiter
-% centered view.
+ta2m = ta_list + TA;
+FPA2p = atan2d(r2m * et .* sind(ta2m), pt);
 
-% 6. find r_clipper2 v_clipper2 FPA_clipper2 ta_clipper2 a_clipper2
-% e_clipper2 dAOP
-r_clipper2 = r_clipper1;
-new_nu = 180 - alpha;
-v_clipper2 = sqrt( dv^2 + v_clipper1m^2 - 2*dv*v_clipper1m*cosd(new_nu) );
-FPA_clipper2 = acosd( (v_inf^2 - v_europa^2 - v_clipper2^2)/(-2*v_europa*v_clipper2) );
-% dFPA = FPA_clipper2 - FPA_clipper1m not correct
+vc = sqrt(MU('Earth')/r2);
+v2p = vc;
 
-FPA_clipper2 = abs(FPA_clipper2)*sign(alpha);
+dv2 = sqrt( v2m.^2 + v2p.^2 - 2.*v2m.*v2p.*cosd(FPA2p) );
 
-ta_clipper2 = atan2d(r_clipper2*v_clipper2^2/MU('Jupiter')*cosd(FPA_clipper2)*sind(FPA_clipper2),...
-    r_clipper2*v_clipper2^2/MU('Jupiter')*cosd(FPA_clipper2)-1);
-if sign(FPA_clipper2) > 0
-    ta_clipper2 = ta_clipper2 + 180;
-end
+nu = acosd( (v2p.^2 - v2m.^2 - dv2.^2)./(-2.*v2m.*dv2) );
 
-energy = v_clipper2^2/2 - MU('Jupiter')/r_clipper2;
-a_clipper2 = -MU('Jupiter')/(2*energy);
+alpha = 180 - nu;
 
-e_clipper2 = sqrt( (r_clipper2*v_clipper2^2/MU('Jupiter') - 1)^2*cosd(FPA_clipper2)^2 + sind(FPA_clipper2)^2 );
+dvt = dv1 + dv2;
 
-dAOP = ta_clipper2 - ta_clipper1m;
+figure(1)
+hold on
+% plot(ta_list, dvt)
+plot(FPA1p, ta_list, 'DisplayName', '\gamma_1')
+plot(FPA2p, ta_list, 'DisplayName', '\gamma_2')
 
+[mindv ind] = min(dvt);
+plot(FPA1p(ind), ta_list(ind), 'r.', 'HandleVisibility','off')
+plot(FPA2p(ind), ta_list(ind), 'r.', 'DisplayName', 'Minimum \Delta v')
+
+xlabel('$\theta^*$ (deg)','Interpreter','latex')
+ylabel('$|\Delta \vec{v}|~/~\gamma_1~/~\gamma_2$','Interpreter','latex')
+legend
+
+% 4. what type of transfer
+figure(2)
+ta_min_dep = ta_list(ind);
+ta_min_arr = ta2m(ind);
+et_min = et(ind);
+at_min = at(ind);
+t = linspace(ta_min_dep-10, ta_min_arr-10, 100);
+major = at_min;
+minor = at_min*sqrt(1-et_min^2);
+x = major*cosd(t);
+y = minor*sind(t);
+focus = sqrt(major^2 - minor^2);
+x = x-focus;
+hold on
+plot(x,y, 'linestyle', '--');
+% plot([0 major*cosd(ta_min_dep)-focus], [0 minor*sind(ta_min_dep)], 'color', 'red');
+% plot([0 major*cosd(ta_min_arr)-focus], [0 minor*sind(ta_min_arr)], 'color', 'red');
+energy_min = MU('Earth')/at(ind);
+% 4.
+% Transfer type is a 1A transfer. Ellipse with TA < 180 & focus not between
+%chord and arc
+t = linspace(0, 2*pi, 100);
+x = r1*cos(t);
+y = r1*sin(t);
+plot(x,y)
+
+x = r2*cos(t);
+y = r2*sin(t);
+plot(x,y)
+axis equal
+title('Initial, Final, and Transfer Orbits')
+set(gca,'XTick',[], 'YTick', [])
+legend('Transfer Orbit', 'Orbit 1', 'Orbit 2')
+
+% 6.
+dv_compared = 3.62 - dvt(ind);
+% The minimum delta v transfer orbit saves 1.0173 km/s of delta v compared
+% to the minimum energy orbit. The semi-major axis of the min-dv transfer
+% orbit is larget than the semi-major axis of the minimum energy orbit.
+% This indicated that the min-dv transfer will have a longer TOF.
 
 \end{lstlisting}

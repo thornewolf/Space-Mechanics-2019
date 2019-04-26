@@ -32,79 +32,49 @@ right  = 2.50cm]{geometry}
 \large AE 313 Homework 10
 \end{center}
 \flushleft
-1. Draw the Jupiter-centered vector diagram of the fly-by.\\
+1. Find the minimum $\Delta v_{Total}$ over the range of departure true anomolies.\\
+~$\Delta v_{min}=2.6027~km/s$\\
+
+\vspace{10px}
+2. Find the corresponding $a_t, e_t, \theta^{^*}_D, v_A, v_D, \gamma_A, \gamma_D$.\\
+\begin{tabular}{llll}
+$a_t=$&19032~km&$e_t=$&0.4473\\
+$\theta^{^*}_D=$&$25.3460^\circ$\\
+$v_A=$&$2.9599~km/s$&$v_D=$&$7.2513~km/s$\\
+$\gamma_A=$&$11.2794$&$\gamma_D=$&$7.7643^\circ$
+\end{tabular}
+
+\vspace{10px}
+3. Plot the true anomoly at departure vs the flight path angle. Mark minimum $\Delta v$. Why is the minimum $\Delta v$ when the flight path angles are small?\\
 \begin{figure}[!htb]
   \center
-  \includegraphics[scale=0.1]{1}
-  \caption{Fly-by diagram}
-  \label{fig:Fig01}
+  \includegraphics[scale=0.4]{FPAGraphs}
+  \caption{$\theta^{^*}_D~vs.~\gamma_D~\&~\gamma_A$}
+  \label{fig:ta-vs-fpa}
 \end{figure}
+The minimum $\Delta v$ occurs when the flight path angles are low because the maneuver to change the angle of flight is expensive whereas an in-line velocity change is cheap. The low flight path angles indicate that most of the change in velocity is in-line; implying a cheap total transfer.
+
+
 \vspace{10px}
-2. Find $\theta^{^*-}$\\
-\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
-ta_clipper1m = atan2d( r_clipper1*v_clipper1m^2/MU('Jupiter') * cosd(FPA_clipper1m)*sind(FPA_clipper1m),...
-    r_clipper1*v_clipper1m^2/MU('Jupiter') * cosd(FPA_clipper1m) - 1);
-\end{lstlisting}
-$\theta^{^*-}=-12.3219^\circ$\\
-This angle is correct due to use of atan2. It is negative because the orbit is descending.
+4. What type of transfer is the minimal $\Delta v$ transfer?\\
+~The minimal $\Delta v$ transfer orbit is a 1A Elliptical Transfer.\\
+
+
 \vspace{10px}
-\newpage
-3. Determine the following: $r_{p/europa}, \alpha$\\
-\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
-periapsis_europa = a_europa*(1-e_europa);
-...
-alpha = -alpha;
-\end{lstlisting}
-\begin{tabular}{ll}
-$r_{p/europa \rightarrow clipper}=$&$1.3594 \cdot 10^3~km$\\
-$\alpha=$&$-116.1968^\circ$\\
-\end{tabular}\\
-$\alpha$ is negative due to the problem statement.
-\vspace{10px}
-4. Does the spacecraft gain or lose energy? Why?\\
-Geometrically, the spacecraft must lose energy. Observing `delta` it can be determined that the spacecraft must have lost energy since `delta` directs the dv vector opposing the initial velocity\\
-\vspace{10px}
-5. Does the spacecraft pass "ahead" or "behind"? Prove it with drawings. (Hint: Draw behind pass vs. ahead pass. How does $v_{inf}$ change?)\\
+5. Plot the two circular orbits and the transfer orbit. Mark the following quantities: $\vec{r}_D, \vec{v}_D, \gamma_D, \Delta \vec{v}_D, \alpha_D, \vec{r}_A, \vec{v}_A, \gamma_A, \Delta \vec{v}_A, \alpha_A$.\\
 \begin{figure}[!htb]
   \center
-  \includegraphics[scale=0.1]{5}
+  \includegraphics[scale=0.4]{orbits}
   \caption{Infinite Diagram}
   \label{fig:Fig02}
 \end{figure}
-The ahead pass correctly matches the orbit described. We also know it has to be an ahead because the orbit is losing energy.
-\vspace{10px}
-6. Determine the characteristics of the new Jupiter orbit:\\
-\begin{lstlisting}[frame=lines,style=Matlab-editor,basicstyle = \mlttfamily]
-r_clipper2 = r_clipper1;
-...
-dAOP = ta_clipper2 - ta_clipper1m;
-\end{lstlisting}
-\begin{tabular}{lclc}
-$r^+=$&$6.6490 \cdot 10^5~km$&$v^+=$&$16.8374~km/s$\\
-$\gamma^+=$&$-7.8811^\circ$&$\theta^{^*+}=$&$-23.1067^\circ$\\
-$a^+=$&$1.2976 \cdot 10^6~km$&$e^+$&$0.5021$\\
-$\Delta \omega=$&$-10.7848^\circ$
-\end{tabular}\\
-Since we know $\alpha < 0$ we know that $\Delta \gamma < 0$ so we can determine that the relationship $\gamma^+ = \gamma^- + \Delta \gamma$ where $\Delta \gamma$ is negative. We know $\theta^{^*+}$'s sign is correct due to the fact that we used $atan2$ in its formulation.\\
-\vspace{10px}
-7. In GMAT, plot the new and old Clipper orbits and the orbit of Europa. Draw the orbit properties.\\
-\begin{figure}[!htb]
-  \center
-  \includegraphics[scale=0.2]{diagram}
-  \caption{GMAT with orbital properties}
-  \label{fig:Fig1}
-\end{figure}
-\begin{figure}[!htb]
-  \center
-  \includegraphics[scale=0.5]{detail}
-  \caption{Detailed View}
-  \label{fig:Fig2}
-\end{figure}
 
 \vspace{10px}
-\newpage
-8. Clipper's mission could involve over 45 fly-bys of Europa. If the goal is to return to Europa, would you have the spacecraft perform the fly by?\\
-I would not have the spacecraft perform this fly-by. The radius of clipper at periapsis around Europa is 1359km while the radius of Europa is 1561km. This is an impact trajectory. Another path would need to be chosen to avoid clipper impact with Europa.
+6. How does the transfer compare to the minimum energy transfer?\\
+The minimum delta v transfer orbit saves $1.0173~km/s$ of delta v compared
+to the minimum energy orbit. The semi-major axis of the min-dv transfer
+orbit is larget than the semi-major axis of the minimum energy orbit.
+This indicated that the minimum $\Delta v$ transfer will have a longer TOF.\\
 \newpage
 \input{matlab}
 \end{document}
