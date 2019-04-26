@@ -112,7 +112,6 @@ legend('Transfer Orbit', 'Orbit 1', 'Orbit 2')
 % 6.
 dv_compared = 3.62 - dvt(ind);
 % The minimum delta v transfer orbit saves 1.0173 km/s of delta v compared
-% to the minimum energy orbit. The semi-major axis of the min-dv transfer
-% orbit is larget than the semi-major axis of the minimum energy orbit.
-% This indicated that the min-dv transfer will have a longer TOF.
+% to the minimum energy orbit. The semi-major 
+% to the minimum energy orbit.
 

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1555962678 "hw.tex" "hw.pdf" "hw" 1555962678
+["pdflatex"] 1556115371 "hw.tex" "hw.pdf" "hw" 1556119304
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1480098666 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -92,15 +92,15 @@
   "Figures/Logo.png" 1555947452 67488 7f4ba349c8773925208d9c1f9ac88a34 ""
   "Figures/detail.png" 1555954290 131453 14900260928cbd80266b7f6f769e097c ""
   "Figures/diagram.jpg" 1555900627 317487 13891fd22aa8e82e1f72f078be4f6789 ""
-  "hw.aux" 1555962678 1341 f8dfa2d342de743a5e6699c2f2ac6e74 ""
-  "hw.out" 1555962678 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "hw.tex" 1555962677 3783 0988d43a977e2d2e639c78813144a9cf ""
+  "hw.aux" 1556115371 1341 9556bdf3093dc73ecfe2dcd4da5eb857 ""
+  "hw.out" 1556115371 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "hw.tex" 1556115435 4290 14efda9f0fb108627c530a25bcb8915b ""
   "matlab.tex" 1555960862 3480 a035f5e4b4026d109615aad010a58e93 ""
-  "title.aux" 1555962678 758 e28d1a4af6b01f19ec4d983b7e9bc3c2 ""
+  "title.aux" 1556115371 758 e28d1a4af6b01f19ec4d983b7e9bc3c2 ""
   "title.tex" 1555953338 497 99769c7e77bf2fa73c878c4aa3c7285a ""
   (generated)
-  "hw.aux"
+  "title.aux"
   "hw.out"
   "hw.pdf"
-  "title.aux"
+  "hw.aux"
   "hw.log"
